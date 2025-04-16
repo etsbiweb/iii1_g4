@@ -1,16 +1,22 @@
-# Projekt: Sistem za izdavanje apartmana
+# Sistem za izdavanje apartmana
 
-## 🎯 Opis
-Web aplikacija za vođenje evidencije apartmana, rezervacija i korisnika koji rezervišu smještaj.
+## 🎯 Cilj projekta
+Izraditi sistem koji omogućava korisnicima da rezervišu apartmane, a administratorima da upravljaju ponudom i pregledaju rezervacije.
 
-## 🧠 Šta učenici trebaju uraditi
-1. Kreirati bazu `apartmani` sa tabelama:
-   - `apartmani(id, naziv, lokacija, cijena, broj_kreveta)`
-   - `korisnici(id, ime, prezime, email)`
-   - `rezervacije(id, apartman_id, korisnik_id, datum_od, datum_do)`
-2. Napraviti korisnički interfejs za:
-   - Prikaz dostupnih apartmana
-   - Unos i pregled rezervacija
-3. Osigurati validaciju datuma i izračun cijene.
+## 🛠️ Tehnologije
+- HTML, CSS
+- PHP
+- MySQL
+
+## ✅ Funkcionalnosti koje učenici trebaju implementirati
+1. Prikaz dostupnih apartmana (lokacija, cijena, slika, broj osoba)
+2. Rezervacija apartmana sa unosom datuma dolaska i odlaska
+3. Registracija i prijava korisnika
+4. Administracija apartmana (dodavanje, uređivanje, brisanje)
+5. Pregled i upravljanje rezervacijama
+
+## 💻 Uloge
+- **Korisnik**: pregled ponude, rezervacija apartmana, registracija
+- **Admin**: upravljanje apartmanima i rezervacijama
 
 ## 😉 Upustvo za github: https://github.com/zinaid/ArcosixGitTutorial/blob/main/tutorial.md
