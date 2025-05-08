@@ -180,12 +180,12 @@
                         <h3>Iznajmi svoj apartman</h3>
                         <form action="#">
                             <div class="check-date">
-                                <label for="date-in">Check In:</label>
+                                <label for="date-in">Vrijeme ulaska:</label>
                                 <input type="text" class="date-input" id="date-in">
                                 <i class="icon_calendar"></i>
                             </div>
                             <div class="check-date">
-                                <label for="date-out">Check Out:</label>
+                                <label for="date-out">Vrijeme izlaska:</label>
                                 <input type="text" class="date-input" id="date-out">
                                 <i class="icon_calendar"></i>
                             </div>
@@ -194,13 +194,18 @@
                                 <select id="guest">
                                     <option value="">2 Osobe</option>
                                     <option value="">3 Osobe</option>
+                                    <option value="">4 Osobe</option>
+                                    <option value="">4+ Osobe</option>
                                 </select>
                             </div>
                             <div class="select-option">
                                 <label for="room">Apartman:</label>
                                 <select id="room">
-                                    <option value="">Mali apartman</option>
-                                    <option value="">Veliki apartman</option>
+                                    <option value="">Mali Apartman</option>
+                                    <option value="">Veliki Apartman</option>
+                                    <option value="">Premium King Apartman</option>
+                                    <option value="">Deluxe Apartman</option>
+                                    <option value="">Porodicni Apartman</option>
                                 </select>
                             </div>
                             <button type="submit">Provjeri dostupnost</button>
@@ -325,21 +330,21 @@
                     <div class="col-lg-3 col-md-6">
                         <div class="hp-room-item set-bg" data-setbg="img/room/room-b1.jpg">
                             <div class="hr-text">
-                                <h3>Double Room</h3>
-                                <h2>199$<span>/Noć</span></h2>
+                                <h3>Mali Apartman</h3>
+                                <h2>69KM<span>/Noć</span></h2>
                                 <table>
                                     <tbody>
                                         <tr>
                                             <td class="r-o">Velicina:</td>
-                                            <td>30 m</td>
+                                            <td>30 m²</td>
                                         </tr>
                                         <tr>
                                             <td class="r-o">Kapacitet:</td>
-                                            <td>Max persion 5</td>
+                                            <td>Max 2 osobe</td>
                                         </tr>
                                         <tr>
                                             <td class="r-o">Kreveti:</td>
-                                            <td>King Krevetis</td>
+                                            <td>2 Kreveta</td>
                                         </tr>
                                         <tr>
                                             <td class="r-o">Servisi:</td>
@@ -347,32 +352,32 @@
                                         </tr>
                                     </tbody>
                                 </table>
-                                <a href="#" class="primary-btn">More Details</a>
+                                <a href="#" class="primary-btn">Vise Detalja</a>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6">
                         <div class="hp-room-item set-bg" data-setbg="img/room/room-b2.jpg">
                             <div class="hr-text">
-                                <h3>Premium King Apartman</h3>
-                                <h2>159$<span>/Noć</span></h2>
+                                <h3>Veliki Apartman</h3>
+                                <h2>99KM<span>/Noć</span></h2>
                                 <table>
                                     <tbody>
                                         <tr>
                                             <td class="r-o">Velicina:</td>
-                                            <td>30 m</td>
+                                            <td>75 m²</td>
                                         </tr>
                                         <tr>
                                             <td class="r-o">Kapacitet:</td>
-                                            <td>Max persion 5</td>
+                                            <td>Max 4 osobe</td>
                                         </tr>
                                         <tr>
                                             <td class="r-o">Kreveti:</td>
-                                            <td>King Krevetis</td>
+                                            <td>3 Kreveta</td>
                                         </tr>
                                         <tr>
                                             <td class="r-o">Servisi:</td>
-                                            <td>Wifi, Televizija, WC,...</td>
+                                            <td>Wifi, Mini Bar, Televizija, WC,...</td>
                                         </tr>
                                     </tbody>
                                 </table>
@@ -383,25 +388,25 @@
                     <div class="col-lg-3 col-md-6">
                         <div class="hp-room-item set-bg" data-setbg="img/room/room-b3.jpg">
                             <div class="hr-text">
-                                <h3>Deluxe apartman</h3>
-                                <h2>198$<span>/Noć</span></h2>
+                                <h3>Deluxe Apartman</h3>
+                                <h2>199KM<span>/Noć</span></h2>
                                 <table>
                                     <tbody>
                                         <tr>
                                             <td class="r-o">Velicina:</td>
-                                            <td>30 m</td>
+                                            <td>150 m²</td>
                                         </tr>
                                         <tr>
                                             <td class="r-o">Kapacitet:</td>
-                                            <td>Max persion 5</td>
+                                            <td>Max 8 osoba</td>
                                         </tr>
                                         <tr>
                                             <td class="r-o">Kreveti:</td>
-                                            <td>King Kreveti</td>
+                                            <td>6 Deluxe Kreveta</td>
                                         </tr>
                                         <tr>
                                             <td class="r-o">Services:</td>
-                                            <td>Wifi, Televizija, WC,...</td>
+                                            <td>Wifi, Bazen, Jakuzi, Sauna, Mini Bar, Televizija,2 WC-a,...</td>
                                         </tr>
                                     </tbody>
                                 </table>
@@ -412,17 +417,17 @@
                     <div class="col-lg-3 col-md-6">
                         <div class="hp-room-item set-bg" data-setbg="img/room/room-b4.jpg">
                             <div class="hr-text">
-                                <h3>Porodični apartman</h3>
-                                <h2>299$<span>/Noć</span></h2>
+                                <h3>Porodični Apartman</h3>
+                                <h2>135KM<span>/Noć</span></h2>
                                 <table>
                                     <tbody>
                                         <tr>
                                             <td class="r-o">Velicina:</td>
-                                            <td>30 m</td>
+                                            <td>100 m²</td>
                                         </tr>
                                         <tr>
                                             <td class="r-o">Kapacitet:</td>
-                                            <td>Max persion 5</td>
+                                            <td>Max 6 osoba</td>
                                         </tr>
                                         <tr>
                                             <td class="r-o">Kreveti:</td>
@@ -430,7 +435,7 @@
                                         </tr>
                                         <tr>
                                             <td class="r-o">Servisi:</td>
-                                            <td>Wifi, Televizija, WC,...</td>
+                                            <td>Wifi, Bazen, Mini Bar, Televizija, 2 WC-a,...</td>
                                         </tr>
                                     </tbody>
                                 </table>
