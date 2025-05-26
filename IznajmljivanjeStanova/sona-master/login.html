@@ -76,16 +76,16 @@
     <div class="container d-flex justify-content-center align-items-center">
         <div class="login-container">
             <h2 class="text-center mb-4">Prijava || Sona Apartamni</h2>
-            <form>
+            <form method="POST" action="login.php">
                 <div class="mb-3">
                     <label for="email" class="form-label">Email adresa</label>
-                    <input type="email" class="form-control" id="email" placeholder="Unesite email">
+                    <input type="email" name="email" class="form-control" id="email" placeholder="Unesite email">
                 </div>
 
                 <div class="mb-3">
     <label for="password" class="form-label">Lozinka</label>
     <div class="position-relative">
-        <input type="password" class="form-control" id="password" placeholder="Unesite lozinku">
+        <input type="password" name="lozinka" class="form-control" id="password" placeholder="Unesite lozinku">
         <i class="bi bi-eye-slash-fill position-absolute top-50 end-0 translate-middle-y me-3 white" id="togglePassword" style="cursor: pointer;"></i>
     </div>
 </div>

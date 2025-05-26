@@ -69,26 +69,26 @@
     <div class="container d-flex justify-content-center align-items-center">
         <div class="register-container">
             <h2 class="text-center mb-4">Registracija || Sona Aparatmani</h2>
-            <form>
+            <form method="POST" action="signup.php">
                 <div class="mb-3">
                     <label for="fullname" class="form-label">Puno ime</label>
-                    <input type="text" class="form-control" id="fullname" placeholder="Unesite ime i prezime">
+                    <input type="text" name="full_name" class="form-control" id="fullname" placeholder="Unesite ime i prezime">
                 </div>
                 <div class="mb-3">
                     <label for="email" class="form-label">Email adresa</label>
-                    <input type="email" class="form-control" id="email" placeholder="Unesite email">
+                    <input type="email" name="email" class="form-control" id="email" placeholder="Unesite email">
                 </div>
                 <div class="mb-3">
     <label for="password" class="form-label">Lozinka</label>
     <div class="position-relative">
-        <input type="password" class="form-control" id="password" placeholder="Unesite lozinku">
+        <input type="password" name="lozinka" class="form-control" id="password" placeholder="Unesite lozinku">
         <i class="bi bi-eye-slash-fill position-absolute top-50 end-0 translate-middle-y me-3 white" id="togglePassword" style="cursor: pointer;"></i>
     </div>
 </div>
                 <div class="mb-3">
     <label for="confirmPassword" class="form-label">Potvrdite lozinku</label>
     <div class="position-relative">
-        <input type="password" class="form-control" id="confirmPassword" placeholder="Ponovite lozinku">
+        <input type="password" name="confirm_lozinka" class="form-control" id="confirmPassword" placeholder="Ponovite lozinku">
         <i class="bi bi-eye-slash-fill position-absolute top-50 end-0 translate-middle-y me-3 white" id="toggleConfirmPassword" style="cursor: pointer;"></i>
     </div>
 </div>
@@ -116,7 +116,7 @@
 </script>
 
                 <div class="d-grid mb-3">
-                    <button href="login.html" type="submit" class="btn btn-custom">Registruj se</button>
+                    <button type="submit" class="btn btn-custom">Registruj se</button>
                 </div>
                 <div class="text-center">
                     <small>Već imate nalog? <a href="login.html">Prijavite se ovde</a></small>
