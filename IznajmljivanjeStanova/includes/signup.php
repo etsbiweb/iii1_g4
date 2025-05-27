@@ -1,77 +1,83 @@
 <?php
-$host = 'localhost:3306';
-$user = 'root';
-$pass = '';
-$db = 'sona';
+session_start();
+include '../includes/dbh.inc.php';
+$hostname = 'localhost';
+$username = 'root';
+$password = '';
+$dbname = 'sona';
 
 // Konekcija
-$conn = new mysqli($host, $user, $pass, $db);
+$conn = new mysqli($hostname, $username, $password, $dbname);
 if ($conn->connect_error) {
     die("Greška u konekciji: " . $conn->connect_error);
 }
 
-// Provjera da li je forma poslana
+$poruka = "";
+
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
+    // Uzmi i očisti unose
     $full_name = trim($_POST['full_name']);
     $email = trim($_POST['email']);
     $password = $_POST['lozinka'];
     $confirm = $_POST['confirm_lozinka'];
 
-    // Provjera lozinke
-    if ($password !== $confirm) {
-        die("Lozinke nisu iste!");
-    }
-
-    // Provjera duplikata emaila
-    $check = $conn->prepare("SELECT id FROM users WHERE email = ?");
-    $check->bind_param("s", $email);
-    $check->execute();
-    $check->store_result();
-
-    if ($check->num_rows > 0) {
-        die("Email je već iskorišten!");
-    }
-
-    // Hash lozinke
-    $hashed = password_hash($password, PASSWORD_DEFAULT);
-
-    // Unos korisnika
-    $stmt = $conn->prepare("INSERT INTO users (full_name, email, lozinka) VALUES (?, ?, ?)");
-    $stmt->bind_param("sss", $full_name, $email, $hashed);
-
-    if ($stmt->execute()) {
-        echo "Uspješno ste registrovani, sada se možete prijaviti!";
+    // Validacija polja
+    if (empty($full_name) || empty($email) || empty($password) || empty($confirm)) {
+        $poruka = "Sva polja su obavezna.";
+    } elseif (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        $poruka = "Email adresa nije validna.";
+    } elseif ($password !== $confirm) {
+        $poruka = "Lozinke se ne poklapaju.";
     } else {
-        echo "Greška: " . $stmt->error;
-    }
+        // Provjera postoji li već email
+        $check = $conn->prepare("SELECT id FROM users WHERE email = ?");
+        $check->bind_param("s", $email);
+        $check->execute();
+        $check->store_result();
 
-    $stmt->close();
-    $check->close();
-    $conn->close();
-} else {
-    echo "Forma nije poslana.";
+        if ($check->num_rows > 0) {
+            $poruka = "Email je već registrovan.";
+        } else {
+            // Hash lozinke i insert
+            $hashed = password_hash($password, PASSWORD_DEFAULT);
+            $stmt = $conn->prepare("INSERT INTO users (full_name, email, lozinka) VALUES (?, ?, ?)");
+            $stmt->bind_param("sss", $full_name, $email, $hashed);
+            if ($stmt->execute()) {
+                $poruka = "Registracija uspješna! <a href='login.php'>Prijavite se</a>";
+                // Nakon uspješne registracije, možemo očistiti varijable forme
+                $full_name = $email = "";
+            } else {
+                $poruka = "Greška prilikom registracije.";
+            }
+            $stmt->close();
+        }
+        $check->close();
+    }
 }
+
+$conn->close();
 ?>
-<html lang="en">
+
+<!DOCTYPE html>
+<html lang="hr">
 <head>
     <meta charset="UTF-8">
+    <title>Sona | Registracija</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sona | Login</title>
     <!-- Bootstrap CDN -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <link rel="icon" type="image/png" href="img/favicon.png">
-
     <style>
         body {
-            background-color: #0a0a23   ;
+            background-color: #0a0a23;
             color: white;
             font-weight: 700;
         }
 
         .login-container {
             max-width: 400px;
-            margin-top: 100px;
+            margin-top: 80px;
             background-color: #1a1a2e;
             padding: 30px;
             border-radius: 10px;
@@ -85,16 +91,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             font-weight: 700;
         }
 
-        ::placeholder {
-        color: #ccc;
-        }
-        
-        .form-control::placeholder{
-            color:#ccc;
-        }
-        .btn-custom:hover {
-            background-color: #c58d5d;
-        }
+        ::placeholder { color: #ccc; }
 
         .form-control {
             background-color: #2a2a3e;
@@ -109,10 +106,6 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             color: white;
         }
 
-        .form-check-label {
-            color: #ccc;
-        }
-
         a {
             color: #dfa974;
             text-decoration: none;
@@ -121,59 +114,48 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         a:hover {
             text-decoration: underline;
         }
-       
     </style>
 </head>
 <body>
 
-    <div class="container d-flex justify-content-center align-items-center">
-        <div class="login-container">
-            <h2 class="text-center mb-4">Prijava || Sona Apartamni</h2>
-            <form method="POST" action="login.php">
-                <div class="mb-3">
-                    <label for="email" class="form-label">Email adresa</label>
-                    <input type="email" class="form-control" id="email" placeholder="Unesite email">
-                </div>
+<div class="container d-flex justify-content-center align-items-center">
+    <div class="login-container">
+        <h2 class="text-center mb-4">Registracija || Sona Apartmani</h2>
 
-                <div class="mb-3">
-    <label for="password" class="form-label">Lozinka</label>
-    <div class="position-relative">
-        <input type="password" class="form-control" id="password" placeholder="Unesite lozinku">
-        <i class="bi bi-eye-slash-fill position-absolute top-50 end-0 translate-middle-y me-3 white" id="togglePassword" style="cursor: pointer;"></i>
+        <?php if (!empty($poruka)) echo "<div class='alert alert-warning'>$poruka</div>"; ?>
+
+        <form method="POST" action="">
+            <div class="mb-3">
+                <label for="full_name" class="form-label">Ime i prezime</label>
+                <input type="text" name="full_name" class="form-control" id="full_name" placeholder="Unesite ime i prezime" value="<?= htmlspecialchars($full_name ?? '') ?>" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="email" class="form-label">Email adresa</label>
+                <input type="email" name="email" class="form-control" id="email" placeholder="Unesite email" value="<?= htmlspecialchars($email ?? '') ?>" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="lozinka" class="form-label">Lozinka</label>
+                <input type="password" name="lozinka" class="form-control" id="lozinka" placeholder="Unesite lozinku" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="confirm_lozinka" class="form-label">Potvrdite lozinku</label>
+                <input type="password" name="confirm_lozinka" class="form-control" id="confirm_lozinka" placeholder="Ponovno unesite lozinku" required>
+            </div>
+
+            <div class="d-grid mb-2">
+                <button type="submit" class="btn btn-custom">Registruj se</button>
+            </div>
+
+            <div class="text-center">
+                <small>Već imate nalog? <a href="login.php">Prijavite se</a></small>
+            </div>
+        </form>
     </div>
 </div>
-<!-- skripta za view password -->
-<script>
-  const togglePassword = document.getElementById('togglePassword');
-  const password = document.getElementById('password');
 
-  togglePassword.addEventListener('click', function () {
-    const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
-    password.setAttribute('type', type);
-    this.classList.toggle('bi-eye-fill');
-    this.classList.toggle('bi-eye-slash-fill');
-  });
-</script>
-
-
-                <!-- Zapamti me -->
-                <div class="mb-3 form-check">
-                    <input type="checkbox" class="form-check-input" id="rememberMe">
-                    <label class="form-check-label" for="rememberMe">Zapamti me</label>
-                </div>
-
-                <div class="d-grid mb-2">
-                    <button type="submit" class="btn btn-custom" href="./index.html">Prijavi se</button>
-                </div>
-
-                <div class="text-center">
-                    <small>Nemate nalog? <a href="singup.html">Registrujte se</a></small>
-                </div>
-            </form>
-        </div>
-    </div>
-
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
