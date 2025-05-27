@@ -133,7 +133,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             </div>
 
             <div class="text-center">
-                <small>Nemate nalog? <a href="signup.html">Registrujte se</a></small>
+                <small>Nemate nalog? <a href="signup.php">Registrujte se</a></small>
             </div>
         </form>
     </div>

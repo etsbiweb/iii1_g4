@@ -1,3 +1,42 @@
+<?php
+session_start();
+include '../includes/dbh.inc.php';
+
+
+$checkin = $checkout = $broj_gostiju = $apartman = "";
+if ($_SERVER["REQUEST_METHOD"] === "POST") {
+    // Uzmi i očisti unose
+    $checkin = trim($_POST['checkin']);
+    $checkout = trim($_POST['checkout']);
+    $broj_gostiju = trim($_POST['broj_gostiju']);
+    $apartman = trim($_POST['apartman']);
+
+    // Validacija polja
+    if (empty($checkin) || empty($checkout) || empty($broj_gostiju) || empty($apartman)) {
+        $poruka = "Molimo popunite sva polja.";
+    } elseif ($checkin > $checkout) {
+        $poruka = "Datum ulaska ne može biti nakon datuma izlaska.";
+    } else {
+        // Ubaci u bazu
+        $stmt = $conn->prepare("INSERT INTO rezervacije (checkin, checkout, broj_gostiju, apartman) VALUES (?, ?, ?, ?)");
+        if (!$stmt) {
+            die("Greška u pripremi upita: " . $conn->error);
+        }
+        $stmt->bind_param("ssis", $checkin, $checkout, $broj_gostiju, $apartman);
+
+        if ($stmt->execute()) {
+            $poruka = '<div class="alert alert-success" role="alert">Rezervacija uspješno dodana!</div>';
+            // Očistimo polja nakon uspjeha
+            $checkin = $checkout = $broj_gostiju = $apartman = "";
+        } else {
+            $poruka = '<div class="alert alert-danger" role="alert">Greška prilikom dodavanja rezervacije.</div>';
+        }
+        $stmt->close();
+    }
+}
+
+$conn->close();
+?>
 <!DOCTYPE html>
 <html lang="zxx">
 
@@ -25,9 +64,56 @@
     <link rel="stylesheet" href="css/magnific-popup.css" type="text/css">
     <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
     <link rel="stylesheet" href="css/style.css" type="text/css">
+   
 </head>
 
 <body>
+     <style>
+    .rezervacija-forma {
+        background-color: #f9f9f9;
+        padding: 30px;
+        border-radius: 12px;
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+        margin-top: 40px;
+    }
+
+    .rezervacija-forma h3 {
+        font-size: 24px;
+        font-weight: bold;
+        margin-bottom: 25px;
+        color: #333;
+    }
+
+    .rezervacija-forma .form-label {
+        font-weight: 600;
+        color: #444;
+    }
+
+    .rezervacija-forma .form-control {
+        border-radius: 8px;
+        border: 1px solid #ccc;
+        padding: 10px 14px;
+        font-size: 15px;
+    }
+
+    .rezervacija-forma .form-control:focus {
+        border-color: #007bff;
+        box-shadow: 0 0 5px rgba(0, 123, 255, 0.2);
+    }
+
+    .rezervacija-forma .btn-custom {
+        background-color: #007bff;
+        color: #fff;
+        border-radius: 8px;
+        padding: 12px;
+        font-weight: 600;
+        transition: background-color 0.3s ease;
+    }
+
+    .rezervacija-forma .btn-custom:hover {
+        background-color: #0056b3;
+    }
+</style>
     <!-- Page Preloder -->
     <div id="preloder">
         <div class="loader"></div>
@@ -316,31 +402,82 @@
                 <div class="col-lg-4">
                     <div class="room-booking">
                         <h3>Your Reservation</h3>
-                        <form action="#">
-                            <div class="check-date">
-                                <label for="date-in">Check In:</label>
-                                <input type="text" class="date-input" id="date-in">
-                                <i class="icon_calendar"></i>
-                            </div>
-                            <div class="check-date">
-                                <label for="date-out">Check Out:</label>
-                                <input type="text" class="date-input" id="date-out">
-                                <i class="icon_calendar"></i>
-                            </div>
-                            <div class="select-option">
-                                <label for="guest">Guests:</label>
-                                <select id="guest">
-                                    <option value="">3 Adults</option>
-                                </select>
-                            </div>
-                            <div class="select-option">
-                                <label for="room">Room:</label>
-                                <select id="room">
-                                    <option value="">1 Room</option>
-                                </select>
-                            </div>
-                            <button type="submit">Check Availability</button>
-                        </form>
+                        <form method="POST" action="" class="rezervacija-forma">
+                <h3>Rezervacija Apartmana</h3>
+
+                <div class="mb-3">
+                    <label for="checkin" class="form-label">Datum ulaska</label>
+                    <input
+                        type="date"
+                        name="checkin"
+                        class="form-control"
+                        id="checkin"
+                        value="<?= htmlspecialchars($checkin ?? '') ?>"
+                        required
+                    />
+                </div>
+
+                <div class="mb-3">
+                    <label for="checkout" class="form-label">Datum izlaska</label>
+                    <input
+                        type="date"
+                        name="checkout"
+                        class="form-control"
+                        id="checkout"
+                        value="<?= htmlspecialchars($checkout ?? '') ?>"
+                        required
+                    />
+                </div>
+
+                <div class="mb-3">
+                    <label for="broj_gostiju" class="form-label">Broj gostiju</label>
+                    <select
+                        name="broj_gostiju"
+                        class="form-control"
+                        id="broj_gostiju"
+                        required
+                    >
+                        <option value="" disabled <?= ($broj_gostiju ?? '') == "" ? "selected" : "" ?>>
+                            Izaberite broj gostiju
+                        </option>
+                        <option value="1" <?= ($broj_gostiju ?? '') == "1" ? "selected" : "" ?>>1 Osoba</option>
+                        <option value="2" <?= ($broj_gostiju ?? '') == "2" ? "selected" : "" ?>>2 Osobe</option>
+                        <option value="3" <?= ($broj_gostiju ?? '') == "3" ? "selected" : "" ?>>3 Osobe</option>
+                        <option value="4" <?= ($broj_gostiju ?? '') == "4" ? "selected" : "" ?>>4 Osobe</option>
+                        <option value="5" <?= ($broj_gostiju ?? '') == "5" ? "selected" : "" ?>>4+ Osoba</option>
+                    </select>
+                </div>
+
+                <div class="mb-4">
+                    <label for="apartman" class="form-label">Apartman</label>
+                    <select
+                        name="apartman"
+                        class="form-control"
+                        id="apartman"
+                        required
+                    >
+                        <option value="" disabled <?= ($apartman ?? '') == "" ? "selected" : "" ?>>
+                            Izaberite apartman
+                        </option>
+                        <option value="Mali Apartman" <?= ($apartman ?? '') == "Mali Apartman" ? "selected" : "" ?>>
+                            Mali Apartman
+                        </option>
+                        <option value="Veliki Apartman" <?= ($apartman ?? '') == "Veliki Apartman" ? "selected" : "" ?>>
+                            Veliki Apartman
+                        </option>
+                        <option value="Deluxe Apartman" <?= ($apartman ?? '') == "Deluxe Apartman" ? "selected" : "" ?>>
+                            Deluxe Apartman
+                        </option>
+                        <option value="Porodični Apartman" <?= ($apartman ?? '') == "Porodični Apartman" ? "selected" : "" ?>>
+                            Porodični Apartman
+                        </option>
+                    </select>
+                </div>
+
+                <div class="d-grid mb-2">
+                    <button type="submit" class="btn btn-custom">Rezerviraj</button>
+                </div>
+            </form>
                     </div>
                 </div>
             </div>
