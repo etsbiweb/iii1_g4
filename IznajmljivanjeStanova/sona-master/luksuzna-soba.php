@@ -105,9 +105,9 @@ try {
         <nav class="mainmenu mobile-menu">
             <ul>
                 <li ><a href="./index.php">Početna</a></li>
-                <li class="active"><a href="./rooms.php">Apartmani</a></li>
+                <li><a href="./rooms.php">Apartmani</a></li>
                 <li><a href="./about-us.php">O nama</a></li>
-                <li><a href="./pages.php">Detalji</a>
+                <li class="active"><a href="./pages.php">Detalji</a>
                     <ul class="dropdown">
                         <li><a href="./room-details.php">Detalji apartmana</a></li>
                         <li><a href="./deluxe-apartman.php">Deluxe apartmani</a></li>
@@ -186,9 +186,9 @@ try {
                             <nav class="mainmenu">
                                 <ul>
                                     <li><a href="./index.php">Početna</a></li>
-                                    <li class="active"><a href="./rooms.php">Apartmani</a></li>
+                                    <li><a href="./rooms.php">Apartmani</a></li>
                                     <li><a href="./about-us.php">O nama</a></li>
-                                    <li><a href="#">Detalji</a>
+                                    <li class="active"><a href="#">Detalji</a>
                                     <ul class="dropdown">
                                     <li><a href="./room-details.php">Mali apartman</a></li>
                                     <li><a href="./veliki-apartman.php">Veliki apartman</a></li>
@@ -218,125 +218,47 @@ try {
     </header>
     <!-- Header End -->
 
-
-    <!-- Breadcrumb sekcija početak -->
+    <!-- Breadcrumb Section Begin -->
     <div class="breadcrumb-section">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
                     <div class="breadcrumb-text">
-                        <h2>Naši Apartmani</h2>
+                        <h2>Luksuzna soba</h2>
                         <div class="bt-option">
                             <a href="./home.html">Početna</a>
-                            <span>Apartmani</span>
+                            <span>Rooms</span>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- Breadcrumb sekcija kraj -->
+    <!-- Breadcrumb Section End -->
 
-    <!-- Sekcija soba početak -->
-    <section class="rooms-section spad">
+    <!-- Room Details Section Begin -->
+    <section class="room-details-section spad">
         <div class="container">
             <div class="row">
-                <div class="col-lg-4 col-md-6">
-                    <div class="room-item">
-                        <img src="img/room/room-1.jpg" alt="">
-                        <div class="ri-text">
-                            <h4>Mali apartman</h4>
-                            <h3>69KM<span>/Noć</span></h3>
-                            <table>
-                                <tbody>
-                                    <tr>
-                                        <td class="r-o">Veličina:</td>
-                                        <td>30 m²</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="r-o">Kapacitet:</td>
-                                        <td>Maksimalno 2 osobe</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="r-o">Kreveti:</td>
-                                        <td>2 kreveta</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="r-o">Usluge:</td>
-                                        <td>Wifi, Televizija, WC,...</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                            <a href="./room-details.php" class="primary-btn">Više detalja</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="room-item">
-                        <img src="img/room/room-2.jpg" alt="">
-                        <div class="ri-text">
-                            <h4>Veliki apartman</h4>
-                            <h3>99KM<span>/Noć</span></h3>
-                            <table>
-                                <tbody>
-                                    <tr>
-                                        <td class="r-o">Veličina:</td>
-                                        <td>75 m²</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="r-o">Kapacitet:</td>
-                                        <td>Maksimalno 4 osobe</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="r-o">Kreveti:</td>
-                                        <td>3 kreveta</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="r-o">Usluge:</td>
-                                        <td>Wifi, Mini Bar, Televizija, WC,...</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                            <a href="./veliki-apartman.php" class="primary-btn">Više detalja</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="room-item">
-                        <img src="img/room/room-3.jpg" alt="">
-                        <div class="ri-text">
-                            <h4>Deluxe apartman</h4>
-                            <h3>150KM<span>/Noć</span></h3>
-                            <table>
-                                <tbody>
-                                    <tr>
-                                        <td class="r-o">Veličina:</td>
-                                        <td>150 m²</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="r-o">Kapacitet:</td>
-                                        <td>Maksimalno 8 osoba</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="r-o">Kreveti:</td>
-                                        <td>6 Deluxe kreveta</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="r-o">Usluge:</td>
-                                        <td>Wifi, Bazen, Jakuzi, Sauna, Mini Bar, Televizija,2 WC-a,...</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                            <a href="./deluxe-apartman.php" class="primary-btn">Više detalja</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="room-item">
-                        <img src="img/room/room-4.jpg" alt="">
-                        <div class="ri-text">
-                            <h4>Luksuzna soba</h4>
-                            <h3>159KM<span>/Noć</span></h3>
+                <div class="col-lg-8">
+                     <div class="room-details-item">
+                        <img src="img/room/room-b3.jpg" style="width: 100%; aspect-ratio: 1 / 1; object-fit: cover;" alt="">
+
+                        <div class="rd-text">
+                            <div class="rd-title">
+                                <h3>Luksuzna soba</h3>
+                                <div class="rdt-right">
+                                    <div class="rating">
+                                        <i class="icon_star"></i>
+                                        <i class="icon_star"></i>
+                                        <i class="icon_star"></i>
+                                        <i class="icon_star"></i>
+                                        <i class="icon_star-half_alt"></i>
+                                    </div>
+                                    <a href="#">Booking Now</a>
+                                </div>
+                            </div>
+                             <h3>159KM<span>/Noć</span></h3>
                             <table>
                                 <tbody>
                                     <tr>
@@ -357,83 +279,123 @@ try {
                                     </tr>
                                 </tbody>
                             </table>
-                           <a href="./luksuzna-soba.php" class="primary-btn">Više detalja</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="room-item">
-                        <img src="img/room/room-5.jpg" alt="">
-                        <div class="ri-text">
-                            <h4>Porodična soba</h4>
-                            <h3>135KM<span>/Noć</span></h3>
-                            <table>
-                                <tbody>
-                                    <tr>
-                                        <td class="r-o">Veličina:</td>
-                                        <td>100 m²</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="r-o">Kapacitet:</td>
-                                        <td>Maksimalno 6 osoba</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="r-o">Kreveti:</td>
-                                        <td>4 king kreveta</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="r-o">Usluge:</td>
-                                        <td>Wifi, Bazen, Mini Bar, Televizija, 2 WC-a,...</td>
-                                    </tr>
-                                </tbody>
                             </table>
-                             <a href="./porodicna-soba.php" class="primary-btn">Više detalja</a>
+                            <p class="f-para">Ako tražiš nešto posebno, nešto što ostavlja utisak i pruža maksimalnu udobnost – 
+                                ovaj apartman od 30 m² je vrhunac luksuza i komfora. Sa cijenom od 199 KM po noći, dobijaš mnogo
+                                 više od običnog smještaja – dobijaš pravo iskustvo odmora kakvo zaslužuješ. Idealan je
+                                   jer pruža prostor za maksimalno 1 osoba.</p> <p>Opremljen sa Kraljevskim krevetom, 
+                                    ovaj apartman ti garantuje udobnost na svakom koraku. A kada je riječ o sadržaju – tu stvari postaju ozbiljne:
+                                     mini bar, Wi-Fi, televizija, Kupatilo... Sve je tu. Bilo da želiš odmor, relaksaciju ili luksuzni boravak s prijateljima, ovdje imaš sve 
+                                     što ti treba na jednom mjestu.</p> <p>Ovo nije samo apartman – ovo je tvoja privatna oaza, savršeno mjesto za punjenje baterija ili slavlje posebnih trenutaka.
+                                         Rezerviši već sada i doživi šta znači spoj prostranosti, stila i potpunog užitka. 
+                                Ovo je tvoj prostor. Tvoj trenutak. Tvoja noć – za samo 159 KM.</p>
+                    </div>
+                    </div>
+                    <div class="rd-reviews">
+                        <h4>Reviews</h4>
+                        <div class="review-item">
+                            <div class="ri-pic">
+                                <img src="img/room/avatar/avatar-1.jpg" alt="">
+                            </div>
+                            <div class="ri-text">
+                                <span>27 Aug 2019</span>
+                                <div class="rating">
+                                    <i class="icon_star"></i>
+                                    <i class="icon_star"></i>
+                                    <i class="icon_star"></i>
+                                    <i class="icon_star"></i>
+                                    <i class="icon_star-half_alt"></i>
+                                </div>
+                                <h5>Brandon Kelley</h5>
+                                <p>Neque porro qui squam est, qui dolorem ipsum quia dolor sit amet, consectetur,
+                                    adipisci velit, sed quia non numquam eius modi tempora. incidunt ut labore et dolore
+                                    magnam.</p>
+                            </div>
+                        </div>
+                        <div class="review-item">
+                            <div class="ri-pic">
+                                <img src="img/room/avatar/avatar-2.jpg" alt="">
+                            </div>
+                            <div class="ri-text">
+                                <span>27 Aug 2019</span>
+                                <div class="rating">
+                                    <i class="icon_star"></i>
+                                    <i class="icon_star"></i>
+                                    <i class="icon_star"></i>
+                                    <i class="icon_star"></i>
+                                    <i class="icon_star-half_alt"></i>
+                                </div>
+                                <h5>Brandon Kelley</h5>
+                                <p>Neque porro qui squam est, qui dolorem ipsum quia dolor sit amet, consectetur,
+                                    adipisci velit, sed quia non numquam eius modi tempora. incidunt ut labore et dolore
+                                    magnam.</p>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="room-item">
-                        <img src="img/room/room-6.jpg" alt="">
-                        <div class="ri-text">
-                            <h4>Mali pogled</h4>
-                            <h3>159KM<span>/Noć</span></h3>
-                            <table>
-                                <tbody>
-                                    <tr>
-                                        <td class="r-o">Veličina:</td>
-                                        <td>30 m²</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="r-o">Kapacitet:</td>
-                                        <td>Maksimalno 5 osobe</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="r-o">Krevet:</td>
-                                        <td>3 Kraljevska kreveta</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="r-o">Usluge:</td>
-                                        <td>Wifi, Televizija, Kupatilo,...</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                            <a href="./mali-pogled.php" class="primary-btn">Više detalja</a>
-                        </div>
+                    <div class="review-add">
+                        <h4>Add Review</h4>
+                        <form action="#" class="ra-form">
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <input type="text" placeholder="Name*">
+                                </div>
+                                <div class="col-lg-6">
+                                    <input type="text" placeholder="Email*">
+                                </div>
+                                <div class="col-lg-12">
+                                    <div>
+                                        <h5>You Rating:</h5>
+                                        <div class="rating">
+                                            <i class="icon_star"></i>
+                                            <i class="icon_star"></i>
+                                            <i class="icon_star"></i>
+                                            <i class="icon_star"></i>
+                                            <i class="icon_star-half_alt"></i>
+                                        </div>
+                                    </div>
+                                    <textarea placeholder="Your Review"></textarea>
+                                    <button type="submit">Submit Now</button>
+                                </div>
+                            </div>
+                        </form>
                     </div>
                 </div>
-                <div class="col-lg-12">
-                    <div class="room-pagination">
-                        <a href="#">1</a>
-                        <a href="#">2</a>
-                        <a href="#">Sljedeća <i class="fa fa-long-arrow-right"></i></a>
+                <div class="col-lg-4">
+                    <div class="room-booking">
+                        <h3>Your Reservation</h3>
+                       <form action="../includes/add.inc.php" method="post">
+    <div class="check-date">
+    <label for="date-in">Check In:</label>
+    <input type="date"  id="date-in" name="checkin" required>
+
+</div>
+    <div class="check-date">
+    <label for="date-out">Check Out:</label>
+    <input type="date"  id="date-out" name="checkout" required>
+
+</div>
+    <div class="select-option">
+        <label for="guest">Guests:</label>
+        <select id="guest" name="broj_gostiju" required>
+            <option value="3">3 Adults</option>
+        </select>
+    </div>
+    <div class="select-option">
+        <label for="room">Room:</label>
+        <select id="room" name="apartman" required>
+            <option value="1">1 Room</option>
+        </select>
+    </div>
+    <button type="submit">Check Availability</button>
+</form>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    <!-- Sekcija soba kraj -->
+    <!-- Room Details Section End -->
 
-    
+   
      <!-- Footer Section Begin -->
     <footer class="footer-section">
         <div class="container">
@@ -498,16 +460,16 @@ try {
         </div>
     </footer>
     <!-- Footer Section End -->
-    <!-- Pretraga model početak -->
+    <!-- Search model Begin -->
     <div class="search-model">
         <div class="h-100 d-flex align-items-center justify-content-center">
             <div class="search-close-switch"><i class="icon_close"></i></div>
             <form class="search-model-form">
-                <input type="text" id="search-input" placeholder="Pretraži ovdje.....">
+                <input type="text" id="search-input" placeholder="Search here.....">
             </form>
         </div>
     </div>
-    <!-- Pretraga model kraj -->
+    <!-- Search model end -->
 
     <!-- Js Plugins -->
     <script src="js/jquery-3.3.1.min.js"></script>
