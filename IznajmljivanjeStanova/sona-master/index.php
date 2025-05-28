@@ -574,27 +574,27 @@ Najviše smo uživali u zajedničkom druženju s drugim gostima – bilo je orga
                 <div class="col-lg-4">
                     <div class="blog-item set-bg" data-setbg="img/blog/blog-1.jpg">
                         <div class="bi-text">
-                            <span class="b-tag">Travel Trip</span>
-                            <h4><a href="#">Tremblant In Canada</a></h4>
-                            <div class="b-time"><i class="icon_clock_alt"></i> 15th April, 2019</div>
+                            <span class="b-tag">Nezaboravna avantura</span>
+                            <h4><a href="#">Surfovanje u Bužimu</a></h4>
+                            <div class="b-time"><i class="icon_clock_alt"></i> 22. April, 2025</div>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-4">
                     <div class="blog-item set-bg" data-setbg="img/blog/blog-2.jpg">
                         <div class="bi-text">
-                            <span class="b-tag">Camping</span>
-                            <h4><a href="#">Choosing A Static Caravan</a></h4>
-                            <div class="b-time"><i class="icon_clock_alt"></i> 15th April, 2019</div>
+                            <span class="b-tag">Kampovanje</span>
+                            <h4><a href="#">Izaberite pravu destinaciju</a></h4>
+                            <div class="b-time"><i class="icon_clock_alt"></i> 1. Januar, 2011</div>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-4">
                     <div class="blog-item set-bg" data-setbg="img/blog/blog-3.jpg">
                         <div class="bi-text">
-                            <span class="b-tag">Event</span>
-                            <h4><a href="#">Copper Canyon</a></h4>
-                            <div class="b-time"><i class="icon_clock_alt"></i> 21th April, 2019</div>
+                            <span class="b-tag">Istraživanje</span>
+                            <h4><a href="#">Kanjon Pazarića</a></h4>
+                            <div class="b-time"><i class="icon_clock_alt"></i> 5. Novembar, 2025</div>
                         </div>
                     </div>
                 </div>
@@ -602,17 +602,17 @@ Najviše smo uživali u zajedničkom druženju s drugim gostima – bilo je orga
                     <div class="blog-item small-size set-bg" data-setbg="img/blog/blog-wide.jpg">
                         <div class="bi-text">
                             <span class="b-tag">Event</span>
-                            <h4><a href="#">Trip To Iqaluit In Nunavut A Canadian Arctic City</a></h4>
-                            <div class="b-time"><i class="icon_clock_alt"></i> 08th April, 2019</div>
+                            <h4><a href="#">Uplovite u san</a></h4>
+                            <div class="b-time"><i class="icon_clock_alt"></i> 12. Maj, 2023</div>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-4">
                     <div class="blog-item small-size set-bg" data-setbg="img/blog/blog-10.jpg">
                         <div class="bi-text">
-                            <span class="b-tag">Travel</span>
-                            <h4><a href="#">Traveling To Barcelona</a></h4>
-                            <div class="b-time"><i class="icon_clock_alt"></i> 12th April, 2019</div>
+                            <span class="b-tag">Uživancija</span>
+                            <h4><a href="#">Putovanje do Barselone</a></h4>
+                            <div class="b-time"><i class="icon_clock_alt"></i> 7. Jun, 2024</div>
                         </div>
                     </div>
                 </div>
