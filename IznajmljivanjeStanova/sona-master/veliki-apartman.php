@@ -387,12 +387,12 @@ try {
                        <form action="../includes/add.inc.php" method="post">
     <div class="check-date">
     <label for="date-in">Check In:</label>
-    <input type="date" class="date-input" id="date-in" name="checkin" required>
+    <input type="date"  id="date-in" name="checkin" required>
 
 </div>
     <div class="check-date">
     <label for="date-out">Check Out:</label>
-    <input type="date" class="date-input" id="date-out" name="checkout" required>
+    <input type="date"  id="date-out" name="checkout" required>
 
 </div>
     <div class="select-option">
