@@ -155,7 +155,7 @@ try {
                                 <a href="#"><i class="fa fa-tripadvisor"></i></a>
                                 <a href="#"><i class="fa fa-instagram"></i></a>
                             </div>
-                            <a href="#" class="bk-btn">Rezerviši sada</a>
+                           <a href="rooms.php" class="bk-btn">Rezerviši sada</a>
                             <div class="language-option">
                                 <img src="img/flag.jpg" alt="">
                                 <span>EN <i class="fa fa-angle-down"></i></span>
@@ -297,7 +297,7 @@ try {
                                 <img src="img/room/avatar/avatar-1.jpg" alt="">
                             </div>
                             <div class="ri-text">
-                                <span>27 Aug 2019</span>
+                                <span>20 Jan 2025</span>
                                 <div class="rating">
                                     <i class="icon_star"></i>
                                     <i class="icon_star"></i>
@@ -305,10 +305,9 @@ try {
                                     <i class="icon_star"></i>
                                     <i class="icon_star-half_alt"></i>
                                 </div>
-                                <h5>Brandon Kelley</h5>
-                                <p>Neque porro qui squam est, qui dolorem ipsum quia dolor sit amet, consectetur,
-                                    adipisci velit, sed quia non numquam eius modi tempora. incidunt ut labore et dolore
-                                    magnam.</p>
+                                <h5>Sin Messi</h5>
+                                                                       <p>Vrlo lijep smještaj. Domaćini su bili gostoljubivi, sve je bilo pripremljeno i čisto kada smo stigli. Parking mjesto je bilo dostupno, što nam je puno značilo. Rado bih opet rezervisala ovaj apartman.</p>
+
                             </div>
                         </div>
                         <div class="review-item">
@@ -316,7 +315,7 @@ try {
                                 <img src="img/room/avatar/avatar-2.jpg" alt="">
                             </div>
                             <div class="ri-text">
-                                <span>27 Aug 2019</span>
+                                <span>19 Jan 2025</span>
                                 <div class="rating">
                                     <i class="icon_star"></i>
                                     <i class="icon_star"></i>
@@ -324,10 +323,9 @@ try {
                                     <i class="icon_star"></i>
                                     <i class="icon_star-half_alt"></i>
                                 </div>
-                                <h5>Brandon Kelley</h5>
-                                <p>Neque porro qui squam est, qui dolorem ipsum quia dolor sit amet, consectetur,
-                                    adipisci velit, sed quia non numquam eius modi tempora. incidunt ut labore et dolore
-                                    magnam.</p>
+                                <h5>Lana Rhoades</h5>
+                                                                       <p>Vrlo lijep smještaj. Domaćini su bili gostoljubivi, sve je bilo pripremljeno i čisto kada smo stigli. Parking mjesto je bilo dostupno, što nam je puno značilo. Rado bih opet rezervisala ovaj apartman.</p>
+
                             </div>
                         </div>
                     </div>

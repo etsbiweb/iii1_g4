@@ -155,7 +155,7 @@ try {
                                 <a href="#"><i class="fa fa-tripadvisor"></i></a>
                                 <a href="#"><i class="fa fa-instagram"></i></a>
                             </div>
-                            <a href="#" class="bk-btn">Rezerviši sada</a>
+                            <a href="rooms.php" class="bk-btn">Rezerviši sada</a>
                             <div class="language-option">
                                 <img src="img/flag.jpg" alt="">
                                 <span>EN <i class="fa fa-angle-down"></i></span>

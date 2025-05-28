@@ -179,7 +179,7 @@ try {
                                 <a href="#"><i class="fa fa-tripadvisor"></i></a>
                                 <a href="#"><i class="fa fa-instagram"></i></a>
                             </div>
-                            <a href="#" class="bk-btn">Rezerviši sada</a>
+                           <a href="rooms.php" class="bk-btn">Rezerviši sada</a>
                             <div class="language-option">
                                 <img src="img/flag.jpg" alt="">
                                 <span>EN <i class="fa fa-angle-down"></i></span>
@@ -319,7 +319,7 @@ try {
                                 <img src="img/room/avatar/avatar-1.jpg" alt="">
                             </div>
                             <div class="ri-text">
-                                <span>27 Aug 2019</span>
+                                <span>21 Nov 2025</span>
                                 <div class="rating">
                                     <i class="icon_star"></i>
                                     <i class="icon_star"></i>
@@ -327,10 +327,9 @@ try {
                                     <i class="icon_star"></i>
                                     <i class="icon_star-half_alt"></i>
                                 </div>
-                                <h5>Brandon Kelley</h5>
-                                <p>Neque porro qui squam est, qui dolorem ipsum quia dolor sit amet, consectetur,
-                                    adipisci velit, sed quia non numquam eius modi tempora. incidunt ut labore et dolore
-                                    magnam.</p>
+                                <h5>Elvir Šušnjar</h5>
+                                      <p>Fantastično iskustvo! Apartman je bio jako čist, udoban i smješten na odličnoj lokaciji. Imao sam sve što mi je bilo potrebno za miran odmor. Posebno bih pohvalio tišinu u objektu i brz Wi-Fi.</p>
+
                             </div>
                         </div>
                         <div class="review-item">
@@ -338,7 +337,7 @@ try {
                                 <img src="img/room/avatar/avatar-2.jpg" alt="">
                             </div>
                             <div class="ri-text">
-                                <span>27 Aug 2019</span>
+                                <span>22 Nov 2024</span>
                                 <div class="rating">
                                     <i class="icon_star"></i>
                                     <i class="icon_star"></i>
@@ -346,10 +345,9 @@ try {
                                     <i class="icon_star"></i>
                                     <i class="icon_star-half_alt"></i>
                                 </div>
-                                <h5>Brandon Kelley</h5>
-                                <p>Neque porro qui squam est, qui dolorem ipsum quia dolor sit amet, consectetur,
-                                    adipisci velit, sed quia non numquam eius modi tempora. incidunt ut labore et dolore
-                                    magnam.</p>
+                                <h5>Samija Kartal</h5>
+                                        <p>Fantastično iskustvo! Apartman je bio jako čist, udoban i smješten na odličnoj lokaciji. Imao sam sve što mi je bilo potrebno za miran odmor. Posebno bih pohvalio tišinu u objektu i brz Wi-Fi.</p>
+
                             </div>
                         </div>
                     </div>

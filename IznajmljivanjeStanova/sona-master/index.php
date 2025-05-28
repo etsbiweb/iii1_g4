@@ -151,7 +151,8 @@ try {
                                 <a target="_blank" href="https://www.tripadvisor.com/Tourism-g295389-Bihac_Una_Sana_Canton_Federation_of_Bosnia_and_Herzegovina-Vacations.php"><i class="fa fa-tripadvisor"></i></a>
                                 <a target="_blank" href="https://www.instagram.com/svarogwinterhouseclub/"><i class="fa fa-instagram"></i></a>
                             </div>
-                            <a href="#" class="bk-btn">Rezerviraši sada</a>
+                            <a href="rooms.php" class="bk-btn">Rezerviši sada</a>
+
                             <div class="language-option">
                                 <img src="img/flag.jpg" alt="">
                                 <span>EN <i class="fa fa-angle-down"></i></span>
@@ -258,7 +259,7 @@ try {
                         </div>
                         <p class="f-para">Sona.com je vaš pouzdan partner za rezervaciju apartmana širom svijeta. Pružamo inspiraciju i jednostavan pristup smještaju putem 90 lokalizovanih stranica na 41 jeziku – svaki dan, za hiljade korisnika.</p>
                         <p class="s-para">Bilo da tražite studio apartman, luksuzni apartman, apartman s pogledom na more ili porodični apartman – na Sona.com ste u sigurnim rukama.</p>
-                        <a href="./about-us.html" class="primary-btn about-btn">Saznaj više</a>
+                        <a href="./about-us.php" class="primary-btn about-btn">Saznaj više</a>
                     </div>
                 </div>
                 <div class="col-lg-6">

@@ -155,7 +155,7 @@ try {
                                 <a href="#"><i class="fa fa-tripadvisor"></i></a>
                                 <a href="#"><i class="fa fa-instagram"></i></a>
                             </div>
-                            <a href="#" class="bk-btn">Rezerviši sada</a>
+                           <a href="rooms.php" class="bk-btn">Rezerviši sada</a>
                             <div class="language-option">
                                 <img src="img/flag.jpg" alt="">
                                 <span>EN <i class="fa fa-angle-down"></i></span>
@@ -300,41 +300,38 @@ try {
                                     <img src="img/blog/blog-details/avatar/avatar-1.jpg" alt="">
                                 </div>
                                 <div class="sc-text">
-                                    <span>27 Aug 2025</span>
-                                    <h5>Mediha Skalić</h5>
-                                    <p>Neque porro qui squam est, qui dolorem ipsum quia dolor sit amet, consectetur,
-                                        adipisci velit, sed quia non numquam eius modi tempora. incidunt ut labore et
-                                        dolore magnam.</p>
-                                    <a href="#" class="comment-btn">Like</a>
-                                    <a href="#" class="comment-btn">Reply</a>
-                                </div>
-                            </div>
-                            <div class="single-comment-item reply-comment">
-                                <div class="sc-author">
-                                    <img src="img/blog/blog-details/avatar/avatar-2.jpg" alt="">
-                                </div>
-                                <div class="sc-text">
-                                    <span>28 Aug 2025</span>
-                                    <h5>Orhana Ćoralić</h5>
-                                    <p>Neque porro qui squam est, qui dolorem ipsum quia dolor sit amet, consectetur,
-                                        adipisci velit, sed quia non numquam eius modi tempora. incidunt ut labore et
-                                        dolore magnam.</p>
-                                    <a href="#" class="comment-btn like-btn">Like</a>
-                                    <a href="#" class="comment-btn reply-btn">Reply</a>
-                                </div>
-                            </div>
-                            <div class="single-comment-item second-comment ">
-                                <div class="sc-author">
-                                    <img src="img/blog/blog-details/avatar/avatar-3.jpg" alt="">
-                                </div>
-                                <div class="sc-text">
-                                    <span>30 Aug 2025</span>
-                                    <h5>Edin Burzić</h5>
-                                    <p>Neque porro qui squam est, qui dolorem ipsum quia dolor sit amet, consectetur,
-                                        adipisci velit, sed quia non numquam eius modi tempora. incidunt ut labore et
-                                        dolore magnam.</p>
-                                    <a href="#" class="comment-btn">Like</a>
-                                    <a href="#" class="comment-btn">Reply</a>
+                               <span>27 Aug 2025</span>
+<h5>Edin Burzić</h5>
+<p>Vrlo ugodno iskustvo! Apartman je bio tačno kao što je opisano – čist, uredan i opremljen svime što je potrebno. Mirna lokacija i brz internet su mi najviše odgovarali jer sam radio od tamo. Definitivno preporuka!</p>
+<a href="#" class="comment-btn">Like</a>
+<a href="#" class="comment-btn">Reply</a>
+</div>
+</div>
+
+<div class="single-comment-item reply-comment">
+    <div class="sc-author">
+        <img src="img/blog/blog-details/avatar/avatar-2.jpg" alt="">
+    </div>
+    <div class="sc-text">
+        <span>28 Aug 2025</span>
+        <h5>Abaz Džanić</h5>
+        <p>Slažem se s Edinom – meni je posebno odgovarala tišina tokom noći i blizina centra grada. Smještaj je izuzetno dobro održavan, a domaćin vrlo profesionalan.</p>
+        <a href="#" class="comment-btn like-btn">Like</a>
+        <a href="#" class="comment-btn reply-btn">Reply</a>
+    </div>
+</div>
+
+<div class="single-comment-item second-comment">
+    <div class="sc-author">
+        <img src="img/blog/blog-details/avatar/avatar-3.jpg" alt="">
+    </div>
+    <div class="sc-text">
+        <span>30 Aug 2025</span>
+        <h5>Mediha Skalić</h5>
+        <p>Apartman je bio odličan! Sve je bilo čisto, moderno i udobno. Posebno mi se dopalo što sam imala privatnost i sve što mi je trebalo nadohvat ruke. Vraćam se sigurno!</p>
+        <a href="#" class="comment-btn">Like</a>
+        <a href="#" class="comment-btn">Reply</a>
+
                                 </div>
                             </div>
                         </div>
