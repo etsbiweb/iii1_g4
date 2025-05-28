@@ -2,7 +2,6 @@
 session_start();
 include '../includes/dbh.inc.php';
 
-
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\SMTP;
 use PHPMailer\PHPMailer\Exception;
@@ -37,9 +36,10 @@ try {
     echo 'Poruka uspješno poslana';
 } catch (Exception $e) {
     echo "Poruka nije uspješno poslana pokušajte ponovo {$mail->ErrorInfo}";
-}
+}}
 
-}
+
+
 
 ?>
 <!DOCTYPE html>
@@ -69,56 +69,33 @@ try {
     <link rel="stylesheet" href="css/magnific-popup.css" type="text/css">
     <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
     <link rel="stylesheet" href="css/style.css" type="text/css">
-   
 </head>
 
 <body>
-     <style>
-    .rezervacija-forma {
-        background-color: #f9f9f9;
-        padding: 30px;
-        border-radius: 12px;
-        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
-        margin-top: 40px;
-    }
+    <style>
+    .date-input {
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    width: 180px;
+}
 
-    .rezervacija-forma h3 {
-        font-size: 24px;
-        font-weight: bold;
-        margin-bottom: 25px;
-        color: #333;
-    }
+.check-date {
+    position: relative;
+    display: inline-block;
+}
 
-    .rezervacija-forma .form-label {
-        font-weight: 600;
-        color: #444;
-    }
+.check-date .icon_calendar {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+    color: #888;
+    font-size: 18px;
+}</style>
 
-    .rezervacija-forma .form-control {
-        border-radius: 8px;
-        border: 1px solid #ccc;
-        padding: 10px 14px;
-        font-size: 15px;
-    }
-
-    .rezervacija-forma .form-control:focus {
-        border-color: #007bff;
-        box-shadow: 0 0 5px rgba(0, 123, 255, 0.2);
-    }
-
-    .rezervacija-forma .btn-custom {
-        background-color: #007bff;
-        color: #fff;
-        border-radius: 8px;
-        padding: 12px;
-        font-weight: 600;
-        transition: background-color 0.3s ease;
-    }
-
-    .rezervacija-forma .btn-custom:hover {
-        background-color: #0056b3;
-    }
-</style>
     <!-- Page Preloder -->
     <div id="preloder">
         <div class="loader"></div>
@@ -271,7 +248,7 @@ try {
             <div class="row">
                 <div class="col-lg-12">
                     <div class="breadcrumb-text">
-                        <h2>Mali apartman</h2>
+                        <h2>Veliki apartman</h2>
                         <div class="bt-option">
                             <a href="./home.html">Početna</a>
                             <span>Rooms</span>
@@ -288,12 +265,12 @@ try {
         <div class="container">
             <div class="row">
                 <div class="col-lg-8">
-                    <div class="room-details-item">
-                        <img src="img/room/room-b1.jpg" style="width: 100%; aspect-ratio: 1 / 1; object-fit: cover;" alt="">
+                     <div class="room-details-item">
+                        <img src="img/room/room-b2.jpg" style="width: 100%; aspect-ratio: 1 / 1; object-fit: cover;" alt="">
 
                         <div class="rd-text">
                             <div class="rd-title">
-                                <h3>Mali apartman</h3>
+                                <h3>Veliki apartman</h3>
                                 <div class="rdt-right">
                                     <div class="rating">
                                         <i class="icon_star"></i>
@@ -305,35 +282,35 @@ try {
                                     <a href="#">Booking Now</a>
                                 </div>
                             </div>
-                            <h2>69KM<span>/Noć</span></h2>
+                            <h2>99KM<span>/Noć</span></h2>
                             <table>
                                 <tbody>
                                     <tr>
-                                        <td class="r-o">Velicina:</td>
-                                        <td>30 m²</td>
+                                        <td class="r-o">Veličina:</td>
+                                        <td>75 m²</td>
                                     </tr>
                                     <tr>
                                         <td class="r-o">Kapacitet:</td>
-                                        <td>Max 2 osobe</td>
+                                        <td>Maksimalno 4 osobe</td>
                                     </tr>
                                     <tr>
                                         <td class="r-o">Kreveti:</td>
-                                        <td>2 Kreveta</td>
+                                        <td>3 kreveta</td>
                                     </tr>
                                     <tr>
-                                        <td class="r-o">Servisi:</td>
-                                        <td>Wifi, Televizija, WC,...</td>
+                                        <td class="r-o">Usluge:</td>
+                                        <td>Wifi, Mini Bar, Televizija, WC,...</td>
                                     </tr>
                                 </tbody>
                             </table>
-                            <p class="f-para">Apartman ili hotel – pitanje je sad. Ako tražite udobnost vlastitog kutka 
-                                dok istražujete ljepote naše zemlje, mali apartman je možda pravi izbor za vas. U nastavku su prednosti boravka u privatnom apartmanu,
-                                 posebno kad govorimo o udobnosti, praktičnosti i osjećaju doma daleko od doma. Boravak u apartmanu veličine 30 m² pruža idealnu kombinaciju 
-                                 privatnosti i funkcionalnosti, savršen za parove ili dvoje prijatelja koji žele svoj mir dok su na putu.</p> <p>Ovaj apartman nudi sve što vam 
-                                    treba za opuštajući boravak: dva udobna kreveta, privatni WC, besplatan Wi-Fi i televiziju za večernje uživanje. Po dolasku, sve je spremno za vas –
-                                     sve što trebate jeste da se smjestite i uživate. I sve to po cijeni od samo 69 KM po noći! Bez gužve, 
-                                bez recepcije, samo vi i vaš prostor. Ako tražite mjesto gdje ćete se osjećati kao kod kuće, a pritom biti blizu svih važnih lokacija – ovaj apartman je pravi pogodak.</p>
-                        </div>
+                            <p class="f-para">Apartman ili hotel – uvijek ista dilema. Ako tražiš prostran smještaj u kojem ćeš se osjećati kao kod kuće,
+                                 ovaj apartman od 75 m² je savršen izbor. Idealno rješenje za porodicu ili grupu prijatelja koji žele udobnost, privatnost i funkcionalan prostor za odmor 
+                                 ili duži boravak. Ovdje imaš sve što ti treba – i više od toga.</p> <p>Kapacitet do 4 osobe i tri udobna kreveta omogućuju da svako ima svoj kutak. Prostor 
+                                    je pažljivo opremljen s modernim pogodnostima poput Wi-Fi mreže, mini bara, televizije i privatnog kupatila. Kombinacija komfora i sadržaja pruža pravo 
+                                    iskustvo doma daleko od doma – bez stresa i gužve, samo ti i tvoja ekipa u vlastitoj oazi mira.</p> <p>Bez obzira da li dolaziš poslovno, turistički ili samo 
+                                        želiš pobjeći iz svakodnevice, ovaj apartman ti nudi prostor za opuštanje,
+                                 druženje i miran san. Rezerviši svoj boravak već danas i osjeti razliku!</p>
+                    </div>
                     </div>
                     <div class="rd-reviews">
                         <h4>Reviews</h4>
@@ -378,13 +355,13 @@ try {
                     </div>
                     <div class="review-add">
                         <h4>Add Review</h4>
-                        <form action="#" method="post" class="ra-form">
+                        <form action="#" class="ra-form">
                             <div class="row">
                                 <div class="col-lg-6">
-                                    <input type="text" placeholder="Name*" required>
+                                    <input type="text" placeholder="Name*">
                                 </div>
                                 <div class="col-lg-6">
-                                    <input type="text" placeholder="Email*" required>
+                                    <input type="text" placeholder="Email*">
                                 </div>
                                 <div class="col-lg-12">
                                     <div>
@@ -397,14 +374,13 @@ try {
                                             <i class="icon_star-half_alt"></i>
                                         </div>
                                     </div>
-                              <textarea id="poruka" name="poruka" placeholder="poruka" class="form-control" rows="6" required></textarea>
-            </div>
+                                    <textarea placeholder="Your Review"></textarea>
                                     <button type="submit">Submit Now</button>
                                 </div>
                             </div>
                         </form>
                     </div>
-             
+                </div>
                 <div class="col-lg-4">
                     <div class="room-booking">
                         <h3>Your Reservation</h3>
@@ -435,14 +411,17 @@ try {
 </form>
                     </div>
                 
-                   </div>
+                
                 </div>
+            
+            
             </div>
         </div>
     </section>
     <!-- Room Details Section End -->
 
-   < <!-- Footer Section Begin -->
+    
+     <!-- Footer Section Begin -->
     <footer class="footer-section">
         <div class="container">
             <div class="footer-text">

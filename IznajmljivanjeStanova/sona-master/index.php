@@ -2,40 +2,45 @@
 session_start();
 include '../includes/dbh.inc.php';
 
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\SMTP;
+use PHPMailer\PHPMailer\Exception;
 
-$checkin = $checkout = $broj_gostiju = $apartman = "";
-if ($_SERVER["REQUEST_METHOD"] === "POST") {
-    // Uzmi i očisti unose
-    $checkin = trim($_POST['checkin']);
-    $checkout = trim($_POST['checkout']);
-    $broj_gostiju = trim($_POST['broj_gostiju']);
-    $apartman = trim($_POST['apartman']);
+require 'phpmailer/src/Exception.php';
+require 'phpmailer/src/PHPMailer.php';
+require 'phpmailer/src/SMTP.php';
 
-    // Validacija polja
-    if (empty($checkin) || empty($checkout) || empty($broj_gostiju) || empty($apartman)) {
-        $poruka = "Molimo popunite sva polja.";
-    } elseif ($checkin > $checkout) {
-        $poruka = "Datum ulaska ne može biti nakon datuma izlaska.";
-    } else {
-        // Ubaci u bazu
-        $stmt = $conn->prepare("INSERT INTO rezervacije (checkin, checkout, broj_gostiju, apartman) VALUES (?, ?, ?, ?)");
-        if (!$stmt) {
-            die("Greška u pripremi upita: " . $conn->error);
-        }
-        $stmt->bind_param("ssis", $checkin, $checkout, $broj_gostiju, $apartman);
+$mail = new PHPMailer(true);
+if ($_SERVER["REQUEST_METHOD"] == "POST" && !empty($_POST['poruka'])) {
+  $mail = new PHPMailer(true);
+try {
 
-        if ($stmt->execute()) {
-            $poruka = '<div class="alert alert-success" role="alert">Rezervacija uspješno dodana!</div>';
-            // Očistimo polja nakon uspjeha
-            $checkin = $checkout = $broj_gostiju = $apartman = "";
-        } else {
-            $poruka = '<div class="alert alert-danger" role="alert">Greška prilikom dodavanja rezervacije.</div>';
-        }
-        $stmt->close();
-    }
-}
+    $mail->isSMTP();
+    $mail->Host       = 'smtp.gmail.com';
+    $mail->SMTPAuth   = true;
+    $mail->Username   = 'ajdin.kozlica@gmail.com';
+    $mail->Password   = 'pclbbuqjenqgvrri'; // Koristi App Password ako koristiš 2FA
+    $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
+    $mail->Port       = 465;
 
-$conn->close();
+    $mail->setFrom('ajdin.kozlica@gmail.com', 'Mailer');
+    $mail->addAddress('ajdin.kozlica@gmail.com', 'Receiver Name');
+
+
+    $mail->isHTML(true);
+    $mail->Subject="Ovo je mail za projektni zadatak";
+    $mail->Body=$_POST['poruka'];
+
+
+    $mail->send();
+    echo 'Poruka uspješno poslana';
+} catch (Exception $e) {
+    echo "Poruka nije uspješno poslana pokušajte ponovo {$mail->ErrorInfo}";
+}}
+
+
+
+
 ?>
 <!DOCTYPE html>
 <html lang="zxx">
@@ -99,18 +104,18 @@ $conn->close();
         <nav class="mainmenu mobile-menu">
             <ul>
                 <li class="active"><a href="./index.php">Početna</a></li>
-                <li><a href="./rooms.html">Apartmani</a></li>
-                <li><a href="./about-us.html">O nama</a></li>
+                <li><a href="./rooms.php">Apartmani</a></li>
+                <li><a href="./about-us.php">O nama</a></li>
                 <li><a href="#">Detalji</a>
                     <ul class="dropdown">
-                        <li><a href="./room-details.html">Mali apartman</a></li>
+                        <li><a href="./room-details.php">Mali apartman</a></li>
                         <li><a href="#">Veliki apartman</a></li>
                         <li><a href="#">Deluxe apartman</a></li>
                         <li><a href="#">Porodicni apartman</a></li>
                     </ul>
                 </li>
-                <li><a href="./blog.html">Novosti</a></li>
-                <li><a href="./contact.html">Kontakt</a></li>
+                <li><a href="./blog.php">Novosti</a></li>
+                <li><a href="./contact.php">Kontakt</a></li>
             </ul>
         </nav>
         <div id="mobile-menu-wrap"></div>
@@ -143,7 +148,7 @@ $conn->close();
                             <div class="top-social">
                                 <a target="_blank" href="https://www.facebook.com/SvarogWinterHouse"><i class="fa fa-facebook"></i></a>
                                 <a target="_blank" href="https://x.com/SamueILFC/status/1925572687742607424"><i class="fa fa-twitter"></i></a>
-                                <a target="_blank" href="https://www.tripadvisor.com/Tourism-g295389-Bihac_Una_Sana_Canton_Federation_of_Bosnia_and_Herzegovina-Vacations.html"><i class="fa fa-tripadvisor"></i></a>
+                                <a target="_blank" href="https://www.tripadvisor.com/Tourism-g295389-Bihac_Una_Sana_Canton_Federation_of_Bosnia_and_Herzegovina-Vacations.php"><i class="fa fa-tripadvisor"></i></a>
                                 <a target="_blank" href="https://www.instagram.com/svarogwinterhouseclub/"><i class="fa fa-instagram"></i></a>
                             </div>
                             <a href="#" class="bk-btn">Rezerviraši sada</a>
@@ -177,20 +182,20 @@ $conn->close();
                             <nav class="mainmenu">
                                 <ul>
                                     <li class="active"><a href="./index.php">Početna</a></li>
-                                    <li><a href="./rooms.html">Apartmani</a></li>
-                                    <li><a href="./about-us.html">O nama</a></li>
+                                    <li><a href="./rooms.php">Apartmani</a></li>
+                                    <li><a href="./about-us.php">O nama</a></li>
                                     <li><a href="#">Detalji</a>
                                     <ul class="dropdown">
-                                    <li><a href="./room-details.html">Mali apartman</a></li>
-                                    <li><a href="./veliki-apartman.html">Veliki apartman</a></li>
-                                    <li><a href="./deluxe-apartman.html">Deluxe apartman</a></li>
-                                    <li><a href="./porodicni-apartman.html">Porodicni apartman</a></li>
-                                    <li><a href="./blog-details.html">Detalji Bloga</a></li>
+                                    <li><a href="./room-details.php">Mali apartman</a></li>
+                                    <li><a href="./veliki-apartman.php">Veliki apartman</a></li>
+                                    <li><a href="./deluxe-apartman.php">Deluxe apartman</a></li>
+                                    <li><a href="./porodicni-apartman.php">Porodicni apartman</a></li>
+                                    <li><a href="./blog-details.php">Detalji Bloga</a></li>
                                     
                                 </ul>
                              </li>
-                                    <li><a href="./blog.html">Novosti</a></li>
-                                    <li><a href="./contact.html">Kontakt</a></li>
+                                    <li><a href="./blog.php">Novosti</a></li>
+                                    <li><a href="./contact.php">Kontakt</a></li>
                                 </ul>
                             </nav>
                             <div class="nav-right search-switch">
@@ -223,80 +228,7 @@ $conn->close();
             <div class="col-xl-4 col-lg-5 offset-xl-2 offset-lg-1">
                 <div class="booking-form">
                     <h3>Iznajmi svoj apartman</h3>
-                 <form method="POST" action="">
-            <div class="mb-3">
-                <label for="checkin" class="form-label">Datum ulaska</label>
-                <input
-                    type="date"
-                    name="checkin"
-                    class="form-control"
-                    id="checkin"
-                    value="<?= htmlspecialchars($checkin) ?>"
-                    required
-                />
-            </div>
-
-            <div class="mb-3">
-                <label for="checkout" class="form-label">Datum izlaska</label>
-                <input
-                    type="date"
-                    name="checkout"
-                    class="form-control"
-                    id="checkout"
-                    value="<?= htmlspecialchars($checkout) ?>"
-                    required
-                />
-            </div>
-
-            <div class="mb-3">
-                <label for="broj_gostiju" class="form-label">Broj gostiju</label>
-                <select
-                    name="broj_gostiju"
-                    class="form-control"
-                    id="broj_gostiju"
-                    required
-                >
-                    <option value="" disabled <?= $broj_gostiju == "" ? "selected" : "" ?>>
-                        Izaberite broj gostiju
-                    </option>
-                    <option value="1" <?= $broj_gostiju == "1" ? "selected" : "" ?>>1 Osoba</option>
-                    <option value="2" <?= $broj_gostiju == "2" ? "selected" : "" ?>>2 Osobe</option>
-                    <option value="3" <?= $broj_gostiju == "3" ? "selected" : "" ?>>3 Osobe</option>
-                    <option value="4" <?= $broj_gostiju == "4" ? "selected" : "" ?>>4 Osobe</option>
-                    <option value="5" <?= $broj_gostiju == "5" ? "selected" : "" ?>>4+ Osoba</option>
-                </select>
-            </div>
-
-            <div class="mb-3">
-                <label for="apartman" class="form-label">Apartman</label>
-                <select
-                    name="apartman"
-                    class="form-control"
-                    id="apartman"
-                    required
-                >
-                    <option value="" disabled <?= $apartman == "" ? "selected" : "" ?>>
-                        Izaberite apartman
-                    </option>
-                    <option value="Mali Apartman" <?= $apartman == "Mali Apartman" ? "selected" : "" ?>>
-                        Mali Apartman
-                    </option>
-                    <option value="Veliki Apartman" <?= $apartman == "Veliki Apartman" ? "selected" : "" ?>>
-                        Veliki Apartman
-                    </option>
-                    <option value="Deluxe Apartman" <?= $apartman == "Deluxe Apartman" ? "selected" : "" ?>>
-                        Deluxe Apartman
-                    </option>
-                    <option value="Porodični Apartman" <?= $apartman == "Porodični Apartman" ? "selected" : "" ?>>
-                        Porodični Apartman
-                    </option>
-                </select>
-            </div>
-
-            <div class="d-grid mb-2">
-                <button type="submit" class="btn btn-custom">Rezerviraj</button>
-            </div>
-        </form>
+                
                 </div>
             </div>
         </div>
@@ -731,10 +663,11 @@ Najviše smo uživali u zajedničkom druženju s drugim gostima – bilo je orga
                         <div class="ft-newslatter">
                             <h6>Najnovije od nas</h6>
                             <p>Budite obavješteni o najnovijim ponudama i obavještenjima</p>
-                            <form action="#" class="fn-form">
-                                <input type="text" placeholder="Email">
+                            <form action="#" method="POST" class="fn-form">
+                                <input type="text" id="subject" name="poruka" class="form-control" placeholder="Email" required>
                                 <button type="submit"><i class="fa fa-send"></i></button>
                             </form>
+                            
                         </div>
                     </div>
                 </div>

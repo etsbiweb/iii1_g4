@@ -2,7 +2,6 @@
 session_start();
 include '../includes/dbh.inc.php';
 
-
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\SMTP;
 use PHPMailer\PHPMailer\Exception;
@@ -37,9 +36,10 @@ try {
     echo 'Poruka uspješno poslana';
 } catch (Exception $e) {
     echo "Poruka nije uspješno poslana pokušajte ponovo {$mail->ErrorInfo}";
-}
+}}
 
-}
+
+
 
 ?>
 <!DOCTYPE html>
@@ -69,56 +69,9 @@ try {
     <link rel="stylesheet" href="css/magnific-popup.css" type="text/css">
     <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
     <link rel="stylesheet" href="css/style.css" type="text/css">
-   
 </head>
 
 <body>
-     <style>
-    .rezervacija-forma {
-        background-color: #f9f9f9;
-        padding: 30px;
-        border-radius: 12px;
-        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
-        margin-top: 40px;
-    }
-
-    .rezervacija-forma h3 {
-        font-size: 24px;
-        font-weight: bold;
-        margin-bottom: 25px;
-        color: #333;
-    }
-
-    .rezervacija-forma .form-label {
-        font-weight: 600;
-        color: #444;
-    }
-
-    .rezervacija-forma .form-control {
-        border-radius: 8px;
-        border: 1px solid #ccc;
-        padding: 10px 14px;
-        font-size: 15px;
-    }
-
-    .rezervacija-forma .form-control:focus {
-        border-color: #007bff;
-        box-shadow: 0 0 5px rgba(0, 123, 255, 0.2);
-    }
-
-    .rezervacija-forma .btn-custom {
-        background-color: #007bff;
-        color: #fff;
-        border-radius: 8px;
-        padding: 12px;
-        font-weight: 600;
-        transition: background-color 0.3s ease;
-    }
-
-    .rezervacija-forma .btn-custom:hover {
-        background-color: #0056b3;
-    }
-</style>
     <!-- Page Preloder -->
     <div id="preloder">
         <div class="loader"></div>
@@ -154,7 +107,7 @@ try {
                 <li ><a href="./index.php">Početna</a></li>
                 <li><a href="./rooms.php">Apartmani</a></li>
                 <li><a href="./about-us.php">O nama</a></li>
-                <li class="active"><a href="./pages.php">Detalji</a>
+                <li><a href="./pages.php">Detalji</a>
                     <ul class="dropdown">
                         <li><a href="./room-details.php">Detalji apartmana</a></li>
                         <li><a href="./deluxe-apartman.php">Deluxe apartmani</a></li>
@@ -163,7 +116,7 @@ try {
                     </ul>
                 </li>
                 <li><a href="./blog.php">Novosti</a></li>
-                <li><a href="./contact.php">Kontakt</a></li>
+                <li class="active"><a href="./contact.php">Kontakt</a></li>
             </ul>
                 </li>
             
@@ -235,7 +188,7 @@ try {
                                     <li><a href="./index.php">Početna</a></li>
                                     <li><a href="./rooms.php">Apartmani</a></li>
                                     <li><a href="./about-us.php">O nama</a></li>
-                                    <li class="active"><a href="#">Detalji</a>
+                                    <li><a href="#">Detalji</a>
                                     <ul class="dropdown">
                                     <li><a href="./room-details.php">Mali apartman</a></li>
                                     <li><a href="./veliki-apartman.php">Veliki apartman</a></li>
@@ -246,7 +199,7 @@ try {
                                 </ul>
                              </li>
                                     <li><a href="./blog.php">Novosti</a></li>
-                                    <li><a href="./contact.php">Kontakt</a></li>
+                                    <li class="active"><a href="./contact.php">Kontakt</a></li>
                                 </ul>
                             </nav>
                             <div class="nav-right search-switch">
@@ -265,184 +218,58 @@ try {
     </header>
     <!-- Header End -->
 
-    <!-- Breadcrumb Section Begin -->
-    <div class="breadcrumb-section">
+
+    <!-- Contact Section Begin -->
+    <section class="contact-section spad">
         <div class="container">
             <div class="row">
-                <div class="col-lg-12">
-                    <div class="breadcrumb-text">
-                        <h2>Mali apartman</h2>
-                        <div class="bt-option">
-                            <a href="./home.html">Početna</a>
-                            <span>Rooms</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Breadcrumb Section End -->
-
-    <!-- Room Details Section Begin -->
-    <section class="room-details-section spad">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8">
-                    <div class="room-details-item">
-                        <img src="img/room/room-b1.jpg" style="width: 100%; aspect-ratio: 1 / 1; object-fit: cover;" alt="">
-
-                        <div class="rd-text">
-                            <div class="rd-title">
-                                <h3>Mali apartman</h3>
-                                <div class="rdt-right">
-                                    <div class="rating">
-                                        <i class="icon_star"></i>
-                                        <i class="icon_star"></i>
-                                        <i class="icon_star"></i>
-                                        <i class="icon_star"></i>
-                                        <i class="icon_star-half_alt"></i>
-                                    </div>
-                                    <a href="#">Booking Now</a>
-                                </div>
-                            </div>
-                            <h2>69KM<span>/Noć</span></h2>
-                            <table>
-                                <tbody>
-                                    <tr>
-                                        <td class="r-o">Velicina:</td>
-                                        <td>30 m²</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="r-o">Kapacitet:</td>
-                                        <td>Max 2 osobe</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="r-o">Kreveti:</td>
-                                        <td>2 Kreveta</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="r-o">Servisi:</td>
-                                        <td>Wifi, Televizija, WC,...</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                            <p class="f-para">Apartman ili hotel – pitanje je sad. Ako tražite udobnost vlastitog kutka 
-                                dok istražujete ljepote naše zemlje, mali apartman je možda pravi izbor za vas. U nastavku su prednosti boravka u privatnom apartmanu,
-                                 posebno kad govorimo o udobnosti, praktičnosti i osjećaju doma daleko od doma. Boravak u apartmanu veličine 30 m² pruža idealnu kombinaciju 
-                                 privatnosti i funkcionalnosti, savršen za parove ili dvoje prijatelja koji žele svoj mir dok su na putu.</p> <p>Ovaj apartman nudi sve što vam 
-                                    treba za opuštajući boravak: dva udobna kreveta, privatni WC, besplatan Wi-Fi i televiziju za večernje uživanje. Po dolasku, sve je spremno za vas –
-                                     sve što trebate jeste da se smjestite i uživate. I sve to po cijeni od samo 69 KM po noći! Bez gužve, 
-                                bez recepcije, samo vi i vaš prostor. Ako tražite mjesto gdje ćete se osjećati kao kod kuće, a pritom biti blizu svih važnih lokacija – ovaj apartman je pravi pogodak.</p>
-                        </div>
-                    </div>
-                    <div class="rd-reviews">
-                        <h4>Reviews</h4>
-                        <div class="review-item">
-                            <div class="ri-pic">
-                                <img src="img/room/avatar/avatar-1.jpg" alt="">
-                            </div>
-                            <div class="ri-text">
-                                <span>27 Aug 2019</span>
-                                <div class="rating">
-                                    <i class="icon_star"></i>
-                                    <i class="icon_star"></i>
-                                    <i class="icon_star"></i>
-                                    <i class="icon_star"></i>
-                                    <i class="icon_star-half_alt"></i>
-                                </div>
-                                <h5>Brandon Kelley</h5>
-                                <p>Neque porro qui squam est, qui dolorem ipsum quia dolor sit amet, consectetur,
-                                    adipisci velit, sed quia non numquam eius modi tempora. incidunt ut labore et dolore
-                                    magnam.</p>
-                            </div>
-                        </div>
-                        <div class="review-item">
-                            <div class="ri-pic">
-                                <img src="img/room/avatar/avatar-2.jpg" alt="">
-                            </div>
-                            <div class="ri-text">
-                                <span>27 Aug 2019</span>
-                                <div class="rating">
-                                    <i class="icon_star"></i>
-                                    <i class="icon_star"></i>
-                                    <i class="icon_star"></i>
-                                    <i class="icon_star"></i>
-                                    <i class="icon_star-half_alt"></i>
-                                </div>
-                                <h5>Brandon Kelley</h5>
-                                <p>Neque porro qui squam est, qui dolorem ipsum quia dolor sit amet, consectetur,
-                                    adipisci velit, sed quia non numquam eius modi tempora. incidunt ut labore et dolore
-                                    magnam.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="review-add">
-                        <h4>Add Review</h4>
-                        <form action="#" method="post" class="ra-form">
-                            <div class="row">
-                                <div class="col-lg-6">
-                                    <input type="text" placeholder="Name*" required>
-                                </div>
-                                <div class="col-lg-6">
-                                    <input type="text" placeholder="Email*" required>
-                                </div>
-                                <div class="col-lg-12">
-                                    <div>
-                                        <h5>You Rating:</h5>
-                                        <div class="rating">
-                                            <i class="icon_star"></i>
-                                            <i class="icon_star"></i>
-                                            <i class="icon_star"></i>
-                                            <i class="icon_star"></i>
-                                            <i class="icon_star-half_alt"></i>
-                                        </div>
-                                    </div>
-                              <textarea id="poruka" name="poruka" placeholder="poruka" class="form-control" rows="6" required></textarea>
-            </div>
-                                    <button type="submit">Submit Now</button>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-             
                 <div class="col-lg-4">
-                    <div class="room-booking">
-                        <h3>Your Reservation</h3>
-                       <form action="../includes/add.inc.php" method="post">
-    <div class="check-date">
-    <label for="date-in">Check In:</label>
-    <input type="date" class="date-input" id="date-in" name="checkin" required>
-
-</div>
-    <div class="check-date">
-    <label for="date-out">Check Out:</label>
-    <input type="date" class="date-input" id="date-out" name="checkout" required>
-
-</div>
-    <div class="select-option">
-        <label for="guest">Guests:</label>
-        <select id="guest" name="broj_gostiju" required>
-            <option value="3">3 Adults</option>
-        </select>
-    </div>
-    <div class="select-option">
-        <label for="room">Room:</label>
-        <select id="room" name="apartman" required>
-            <option value="1">1 Room</option>
-        </select>
-    </div>
-    <button type="submit">Check Availability</button>
-</form>
+                    <div class="contact-text">
+                        <h2>Kontakt Info</h2>
+                        <p>Kontaktirajte nas ukoliko imate pitanja ili trebate direktnu pomoć i pokušat cemo vam odgovoriti u što kraćem roku!</p>
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <td class="c-o">Address:</td>
+                                    <td>Ulica Samela Bešića bb, Zrće, Bosna i Hercegovina</td>
+                                </tr>
+                                <tr>
+                                    <td class="c-o">Phone:</td>
+                                    <td>(+387) 62 595 914</td>
+                                </tr>
+                                <tr>
+                                    <td class="c-o">Email:</td>
+                                    <td>info.etsbiapartman@gmail.com</td>
+                                </tr>
+                                <tr>
+                                    <td class="c-o">Fax:</td>
+                                    <td>(+387) 62 595 914</td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
-                
-                   </div>
                 </div>
+                <div class="col-lg-7 offset-lg-1">
+                      <form action="#" method="POST" class="container">
+            <div class="mb-3">
+                <label for="poruka" class="form-label">Poruka:</label>
+                <textarea id="poruka" name="poruka" class="form-control" rows="6" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Pošalji</button>
+        </form>
+                </div>
+            </div>
+            <div class="map">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2843.7629867091096!2d14.911859903146306!3d44.54048529459365!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x476249fe42c1b537%3A0x21ea83db9ed4403b!2sICE%20BAR%20Zrce%20Beach!5e0!3m2!1sen!2sba!4v1747295103713!5m2!1sen!2sba"
+                    height="470" style="border:0;" allowfullscreen=""></iframe>
             </div>
         </div>
     </section>
-    <!-- Room Details Section End -->
+    <!-- Contact Section End -->
 
-   < <!-- Footer Section Begin -->
+   
+     <!-- Footer Section Begin -->
     <footer class="footer-section">
         <div class="container">
             <div class="footer-text">
@@ -506,7 +333,6 @@ try {
         </div>
     </footer>
     <!-- Footer Section End -->
-
     <!-- Search model Begin -->
     <div class="search-model">
         <div class="h-100 d-flex align-items-center justify-content-center">

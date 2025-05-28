@@ -21,7 +21,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             if (password_verify($password, $hashed_password)) {
                 $_SESSION['user_id'] = $id;
                 $_SESSION['full_name'] = $full_name;
-                header("Location: ../sona-master/index.html");
+                header("Location: ../sona-master/index.php");
                 exit();
             } else {
                 $greska = "Pogrešna lozinka.";

@@ -2,7 +2,6 @@
 session_start();
 include '../includes/dbh.inc.php';
 
-
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\SMTP;
 use PHPMailer\PHPMailer\Exception;
@@ -37,9 +36,10 @@ try {
     echo 'Poruka uspješno poslana';
 } catch (Exception $e) {
     echo "Poruka nije uspješno poslana pokušajte ponovo {$mail->ErrorInfo}";
-}
+}}
 
-}
+
+
 
 ?>
 <!DOCTYPE html>
@@ -69,56 +69,9 @@ try {
     <link rel="stylesheet" href="css/magnific-popup.css" type="text/css">
     <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
     <link rel="stylesheet" href="css/style.css" type="text/css">
-   
 </head>
 
 <body>
-     <style>
-    .rezervacija-forma {
-        background-color: #f9f9f9;
-        padding: 30px;
-        border-radius: 12px;
-        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
-        margin-top: 40px;
-    }
-
-    .rezervacija-forma h3 {
-        font-size: 24px;
-        font-weight: bold;
-        margin-bottom: 25px;
-        color: #333;
-    }
-
-    .rezervacija-forma .form-label {
-        font-weight: 600;
-        color: #444;
-    }
-
-    .rezervacija-forma .form-control {
-        border-radius: 8px;
-        border: 1px solid #ccc;
-        padding: 10px 14px;
-        font-size: 15px;
-    }
-
-    .rezervacija-forma .form-control:focus {
-        border-color: #007bff;
-        box-shadow: 0 0 5px rgba(0, 123, 255, 0.2);
-    }
-
-    .rezervacija-forma .btn-custom {
-        background-color: #007bff;
-        color: #fff;
-        border-radius: 8px;
-        padding: 12px;
-        font-weight: 600;
-        transition: background-color 0.3s ease;
-    }
-
-    .rezervacija-forma .btn-custom:hover {
-        background-color: #0056b3;
-    }
-</style>
     <!-- Page Preloder -->
     <div id="preloder">
         <div class="loader"></div>
@@ -265,184 +218,196 @@ try {
     </header>
     <!-- Header End -->
 
-    <!-- Breadcrumb Section Begin -->
-    <div class="breadcrumb-section">
+    <!-- Blog Details Hero Section Begin -->
+    <section class="blog-details-hero set-bg" data-setbg="img/blog/blog-details/blog-details-hero.jpg">
         <div class="container">
             <div class="row">
-                <div class="col-lg-12">
-                    <div class="breadcrumb-text">
-                        <h2>Mali apartman</h2>
-                        <div class="bt-option">
-                            <a href="./home.html">Početna</a>
-                            <span>Rooms</span>
-                        </div>
+                <div class="col-lg-10 offset-lg-1">
+                    <div class="bd-hero-text">
+                        <span>Travel Trip & Camping</span>
+                        <h2>Cdc Issues Health Alert Notice For Travelers To Usa From Hon</h2>
+                        <ul>
+                            <li class="b-time"><i class="icon_clock_alt"></i> 15th April, 2019</li>
+                            <li><i class="icon_profile"></i> Kerry Jones</li>
+                        </ul>
                     </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Breadcrumb Section End -->
-
-    <!-- Room Details Section Begin -->
-    <section class="room-details-section spad">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8">
-                    <div class="room-details-item">
-                        <img src="img/room/room-b1.jpg" style="width: 100%; aspect-ratio: 1 / 1; object-fit: cover;" alt="">
-
-                        <div class="rd-text">
-                            <div class="rd-title">
-                                <h3>Mali apartman</h3>
-                                <div class="rdt-right">
-                                    <div class="rating">
-                                        <i class="icon_star"></i>
-                                        <i class="icon_star"></i>
-                                        <i class="icon_star"></i>
-                                        <i class="icon_star"></i>
-                                        <i class="icon_star-half_alt"></i>
-                                    </div>
-                                    <a href="#">Booking Now</a>
-                                </div>
-                            </div>
-                            <h2>69KM<span>/Noć</span></h2>
-                            <table>
-                                <tbody>
-                                    <tr>
-                                        <td class="r-o">Velicina:</td>
-                                        <td>30 m²</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="r-o">Kapacitet:</td>
-                                        <td>Max 2 osobe</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="r-o">Kreveti:</td>
-                                        <td>2 Kreveta</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="r-o">Servisi:</td>
-                                        <td>Wifi, Televizija, WC,...</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                            <p class="f-para">Apartman ili hotel – pitanje je sad. Ako tražite udobnost vlastitog kutka 
-                                dok istražujete ljepote naše zemlje, mali apartman je možda pravi izbor za vas. U nastavku su prednosti boravka u privatnom apartmanu,
-                                 posebno kad govorimo o udobnosti, praktičnosti i osjećaju doma daleko od doma. Boravak u apartmanu veličine 30 m² pruža idealnu kombinaciju 
-                                 privatnosti i funkcionalnosti, savršen za parove ili dvoje prijatelja koji žele svoj mir dok su na putu.</p> <p>Ovaj apartman nudi sve što vam 
-                                    treba za opuštajući boravak: dva udobna kreveta, privatni WC, besplatan Wi-Fi i televiziju za večernje uživanje. Po dolasku, sve je spremno za vas –
-                                     sve što trebate jeste da se smjestite i uživate. I sve to po cijeni od samo 69 KM po noći! Bez gužve, 
-                                bez recepcije, samo vi i vaš prostor. Ako tražite mjesto gdje ćete se osjećati kao kod kuće, a pritom biti blizu svih važnih lokacija – ovaj apartman je pravi pogodak.</p>
-                        </div>
-                    </div>
-                    <div class="rd-reviews">
-                        <h4>Reviews</h4>
-                        <div class="review-item">
-                            <div class="ri-pic">
-                                <img src="img/room/avatar/avatar-1.jpg" alt="">
-                            </div>
-                            <div class="ri-text">
-                                <span>27 Aug 2019</span>
-                                <div class="rating">
-                                    <i class="icon_star"></i>
-                                    <i class="icon_star"></i>
-                                    <i class="icon_star"></i>
-                                    <i class="icon_star"></i>
-                                    <i class="icon_star-half_alt"></i>
-                                </div>
-                                <h5>Brandon Kelley</h5>
-                                <p>Neque porro qui squam est, qui dolorem ipsum quia dolor sit amet, consectetur,
-                                    adipisci velit, sed quia non numquam eius modi tempora. incidunt ut labore et dolore
-                                    magnam.</p>
-                            </div>
-                        </div>
-                        <div class="review-item">
-                            <div class="ri-pic">
-                                <img src="img/room/avatar/avatar-2.jpg" alt="">
-                            </div>
-                            <div class="ri-text">
-                                <span>27 Aug 2019</span>
-                                <div class="rating">
-                                    <i class="icon_star"></i>
-                                    <i class="icon_star"></i>
-                                    <i class="icon_star"></i>
-                                    <i class="icon_star"></i>
-                                    <i class="icon_star-half_alt"></i>
-                                </div>
-                                <h5>Brandon Kelley</h5>
-                                <p>Neque porro qui squam est, qui dolorem ipsum quia dolor sit amet, consectetur,
-                                    adipisci velit, sed quia non numquam eius modi tempora. incidunt ut labore et dolore
-                                    magnam.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="review-add">
-                        <h4>Add Review</h4>
-                        <form action="#" method="post" class="ra-form">
-                            <div class="row">
-                                <div class="col-lg-6">
-                                    <input type="text" placeholder="Name*" required>
-                                </div>
-                                <div class="col-lg-6">
-                                    <input type="text" placeholder="Email*" required>
-                                </div>
-                                <div class="col-lg-12">
-                                    <div>
-                                        <h5>You Rating:</h5>
-                                        <div class="rating">
-                                            <i class="icon_star"></i>
-                                            <i class="icon_star"></i>
-                                            <i class="icon_star"></i>
-                                            <i class="icon_star"></i>
-                                            <i class="icon_star-half_alt"></i>
-                                        </div>
-                                    </div>
-                              <textarea id="poruka" name="poruka" placeholder="poruka" class="form-control" rows="6" required></textarea>
-            </div>
-                                    <button type="submit">Submit Now</button>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-             
-                <div class="col-lg-4">
-                    <div class="room-booking">
-                        <h3>Your Reservation</h3>
-                       <form action="../includes/add.inc.php" method="post">
-    <div class="check-date">
-    <label for="date-in">Check In:</label>
-    <input type="date" class="date-input" id="date-in" name="checkin" required>
-
-</div>
-    <div class="check-date">
-    <label for="date-out">Check Out:</label>
-    <input type="date" class="date-input" id="date-out" name="checkout" required>
-
-</div>
-    <div class="select-option">
-        <label for="guest">Guests:</label>
-        <select id="guest" name="broj_gostiju" required>
-            <option value="3">3 Adults</option>
-        </select>
-    </div>
-    <div class="select-option">
-        <label for="room">Room:</label>
-        <select id="room" name="apartman" required>
-            <option value="1">1 Room</option>
-        </select>
-    </div>
-    <button type="submit">Check Availability</button>
-</form>
-                    </div>
-                
-                   </div>
                 </div>
             </div>
         </div>
     </section>
-    <!-- Room Details Section End -->
+    <!-- Blog Details Hero End -->
 
-   < <!-- Footer Section Begin -->
+    <!-- Blog Details Section Begin -->
+    <section class="blog-details-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-10 offset-lg-1">
+                    <div class="blog-details-text">
+                        <div class="bd-title">
+                           <p>Razmišljate o opuštajućem odmoru s dozom autentičnosti? Jeste li već razmotrili Bosnu i Hercegovinu kao svoju narednu destinaciju? <strong>Apartmani Sona</strong>
+                             pružaju savršen spoj udobnosti i prirodnih ljepota, a boravkom ovdje vaša avantura započinje čim zakoračite van apartmana. Samo boravak u apartmanima Sona omogućit
+                              će vam ovakav spoj mira, prirode i kulture – ako još nisu na vašoj listi destinacija, sada je pravo vrijeme da ih uvrstite!</p> <p>U <strong>apartmanima Sona</strong>
+                                 vaš boravak u Bosni i Hercegovini bit će nezaboravan. Okruženi zelenilom, planinama i rijekama, imaćete priliku doživjeti čari ove zemlje iz prve ruke. Bosna i Hercegovina 
+                                 je zemlja bogate historije i raznolikih tradicija, a ljudi su topli, gostoljubivi i ponosni na svoju kulturu. U blizini apartmana možete istraživati lokalne staze, posjetiti
+                                  tradicionalna sela, a ako ste ljubitelj prirode, oduševit će vas kristalno čiste rijeke i bajkoviti vodopadi. Ovo mjesto je idealno za porodični odmor, romantičan bijeg ili
+                                   miran solo retreat.
+                             <strong>Apartmani Sona</strong>
+                              svakako trebaju biti visoko na vašoj listi kada birate savršeno mjesto za svoj odmor!</p>
+                        </div>
+                        <div class="bd-pic">
+                            <div class="bp-item">
+                                <img src="img/blog/blog-details/blog-details-1.jpg" alt="">
+                            </div>
+                            <div class="bp-item">
+                                <img src="img/blog/blog-details/blog-details-2.jpg" alt="">
+                            </div>
+                            <div class="bp-item">
+                                <img src="img/blog/blog-details/blog-details-3.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="bd-more-text">
+                           <div class="bm-item"> <h4>Ako planirate odmor u Bosni i Hercegovini</h4>
+                             <p>Sigurno želite udoban, miran smještaj, daleko od gradske gužve, a opet
+                                 dovoljno blizu svih zanimljivih lokacija. <strong>Apartmani Sona</strong> 
+                                 nude upravo to – savršeno mjesto za opuštanje, istraživanje prirode i uživanje 
+                                 u domaćinskoj atmosferi. Bez obzira dolazite li iz inostranstva, drugog grada, 
+                                 ili tražite bijeg od svakodnevice, ovdje ćete pronaći svoj mir. A sve to po pristupačnoj cijeni,
+                                  uz toplu dobrodošlicu i komfor koji zaslužujete.</p> </div> <div class="bm-item"> <h4>Svaki put
+                                     kad tražim smještaj za odmor</h4> <p>Nadam se da ću pronaći mjesto koje je čisto, udobno i u mirnom okruženju.
+                                         Često se razočaram zbog buke, loše usluge ili loših uvjeta. Ali otkako sam otkrio <strong>apartmane Sona</strong>,
+                                          moj odmor je zaista postao odmor. Ovdje nema neprijatnih iznenađenja – samo svježi zrak, tišina, ljubazni domaćini i osjećaj kao kod kuće. 
+                            Za cijenu koju inače platim za hotelsku sobu, ovdje dobijem mnogo više – prostor, prirodu, i pravi ugođaj.</p> </div>
+                        </div>
+                        <div class="tag-share">
+                            <div class="tags">
+                                <a href="#">Travel Trip</a>
+                                <a href="#">Camping</a>
+                                <a href="#">Event</a>
+                            </div>
+                            <div class="social-share">
+                                <span>Share:</span>
+                                <a href="#"><i class="fa fa-facebook"></i></a>
+                                <a href="#"><i class="fa fa-twitter"></i></a>
+                                <a href="#"><i class="fa fa-tripadvisor"></i></a>
+                                <a href="#"><i class="fa fa-instagram"></i></a>
+                                <a href="#"><i class="fa fa-youtube-play"></i></a>
+                            </div>
+                        </div>
+                        <div class="comment-option">
+                            <h4>2 Comments</h4>
+                            <div class="single-comment-item first-comment">
+                                <div class="sc-author">
+                                    <img src="img/blog/blog-details/avatar/avatar-1.jpg" alt="">
+                                </div>
+                                <div class="sc-text">
+                                    <span>27 Aug 2019</span>
+                                    <h5>Brandon Kelley</h5>
+                                    <p>Neque porro qui squam est, qui dolorem ipsum quia dolor sit amet, consectetur,
+                                        adipisci velit, sed quia non numquam eius modi tempora. incidunt ut labore et
+                                        dolore magnam.</p>
+                                    <a href="#" class="comment-btn">Like</a>
+                                    <a href="#" class="comment-btn">Reply</a>
+                                </div>
+                            </div>
+                            <div class="single-comment-item reply-comment">
+                                <div class="sc-author">
+                                    <img src="img/blog/blog-details/avatar/avatar-2.jpg" alt="">
+                                </div>
+                                <div class="sc-text">
+                                    <span>27 Aug 2019</span>
+                                    <h5>Brandon Kelley</h5>
+                                    <p>Neque porro qui squam est, qui dolorem ipsum quia dolor sit amet, consectetur,
+                                        adipisci velit, sed quia non numquam eius modi tempora. incidunt ut labore et
+                                        dolore magnam.</p>
+                                    <a href="#" class="comment-btn like-btn">Like</a>
+                                    <a href="#" class="comment-btn reply-btn">Reply</a>
+                                </div>
+                            </div>
+                            <div class="single-comment-item second-comment ">
+                                <div class="sc-author">
+                                    <img src="img/blog/blog-details/avatar/avatar-3.jpg" alt="">
+                                </div>
+                                <div class="sc-text">
+                                    <span>27 Aug 2019</span>
+                                    <h5>Brandon Kelley</h5>
+                                    <p>Neque porro qui squam est, qui dolorem ipsum quia dolor sit amet, consectetur,
+                                        adipisci velit, sed quia non numquam eius modi tempora. incidunt ut labore et
+                                        dolore magnam.</p>
+                                    <a href="#" class="comment-btn">Like</a>
+                                    <a href="#" class="comment-btn">Reply</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="leave-comment">
+                            <h4>Leave A Comment</h4>
+                            <form action="#" class="comment-form">
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <input type="text" placeholder="Name">
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <input type="text" placeholder="Email">
+                                    </div>
+                                    <div class="col-lg-12 text-center">
+                                        <input type="text" placeholder="Website">
+                                        <textarea placeholder="Messages"></textarea>
+                                        <button type="submit" class="site-btn">Send Message</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Blog Details Section End -->
+
+    <!-- Recommend Blog Section Begin -->
+    <section class="recommend-blog-section spad">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section-title">
+                        <h2>Recommended</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="blog-item set-bg" data-setbg="img/blog/blog-1.jpg">
+                        <div class="bi-text">
+                            <span class="b-tag">Travel Trip</span>
+                            <h4><a href="#">Tremblant In Canada</a></h4>
+                            <div class="b-time"><i class="icon_clock_alt"></i> 15th April, 2019</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="blog-item set-bg" data-setbg="img/blog/blog-2.jpg">
+                        <div class="bi-text">
+                            <span class="b-tag">Camping</span>
+                            <h4><a href="#">Choosing A Static Caravan</a></h4>
+                            <div class="b-time"><i class="icon_clock_alt"></i> 15th April, 2019</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="blog-item set-bg" data-setbg="img/blog/blog-3.jpg">
+                        <div class="bi-text">
+                            <span class="b-tag">Event</span>
+                            <h4><a href="#">Copper Canyon</a></h4>
+                            <div class="b-time"><i class="icon_clock_alt"></i> 21th April, 2019</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Recommend Blog Section End -->
+
+   
+     <!-- Footer Section Begin -->
     <footer class="footer-section">
         <div class="container">
             <div class="footer-text">
