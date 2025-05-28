@@ -243,81 +243,81 @@ try {
                 <div class="col-lg-4 col-md-6">
                     <div class="blog-item set-bg" data-setbg="img/blog/blog-1.jpg">
                         <div class="bi-text">
-                            <span class="b-tag">Travel Trip</span>
-                            <h4><a href="./blog-details.html">Tremblant In Canada</a></h4>
-                            <div class="b-time"><i class="icon_clock_alt"></i> 15th April, 2019</div>
+                            <span class="b-tag">Nezaboravna Avanturu</span>
+                            <h4><a href="./blog-details.html">Surfovanje u Bužimu</a></h4>
+                            <div class="b-time"><i class="icon_clock_alt"></i> 22. April, 2025</div>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6">
                     <div class="blog-item set-bg" data-setbg="img/blog/blog-2.jpg">
                         <div class="bi-text">
-                            <span class="b-tag">Camping</span>
-                            <h4><a href="./blog-details.html">Choosing A Static Caravan</a></h4>
-                            <div class="b-time"><i class="icon_clock_alt"></i> 15th April, 2019</div>
+                            <span class="b-tag">Kampovanje</span>
+                            <h4><a href="./blog-details.html">Izaberite pravu destinaciju</a></h4>
+                            <div class="b-time"><i class="icon_clock_alt"></i> 1. Januar, 2024</div>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6">
                     <div class="blog-item set-bg" data-setbg="img/blog/blog-3.jpg">
                         <div class="bi-text">
-                            <span class="b-tag">Event</span>
-                            <h4><a href="./blog-details.html">Copper Canyon</a></h4>
-                            <div class="b-time"><i class="icon_clock_alt"></i> 21th April, 2019</div>
+                            <span class="b-tag">Istraživanje</span>
+                            <h4><a href="./blog-details.html">Kanjon Pazarića</a></h4>
+                            <div class="b-time"><i class="icon_clock_alt"></i> 5. Novembar, 2025</div>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6">
                     <div class="blog-item set-bg" data-setbg="img/blog/blog-4.jpg">
                         <div class="bi-text">
-                            <span class="b-tag">Trivago</span>
-                            <h4><a href="./blog-details.html">A Time Travel Postcard</a></h4>
-                            <div class="b-time"><i class="icon_clock_alt"></i> 22th April, 2019</div>
+                            <span class="b-tag">Srbljani</span>
+                            <h4><a href="./blog-details.html">Putujte kroz vrijeme</a></h4>
+                            <div class="b-time"><i class="icon_clock_alt"></i> 14. Maj, 2024</div>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6">
                     <div class="blog-item set-bg" data-setbg="img/blog/blog-5.jpg">
                         <div class="bi-text">
-                            <span class="b-tag">Camping</span>
-                            <h4><a href="./blog-details.html">A Time Travel Postcard</a></h4>
-                            <div class="b-time"><i class="icon_clock_alt"></i> 25th April, 2019</div>
+                            <span class="b-tag">Let</span>
+                            <h4><a href="./blog-details.html">Pogled na život</a></h4>
+                            <div class="b-time"><i class="icon_clock_alt"></i> 21. Februar, 2023</div>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6">
                     <div class="blog-item set-bg" data-setbg="img/blog/blog-6.jpg">
                         <div class="bi-text">
-                            <span class="b-tag">Travel Trip</span>
-                            <h4><a href="./blog-details.html">Virginia Travel For Kids</a></h4>
-                            <div class="b-time"><i class="icon_clock_alt"></i> 28th April, 2019</div>
+                            <span class="b-tag">Odmor</span>
+                            <h4><a href="./blog-details.html">Odmor za dušu</a></h4>
+                            <div class="b-time"><i class="icon_clock_alt"></i> 28. April, 2023</div>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6">
                     <div class="blog-item set-bg" data-setbg="img/blog/blog-7.jpg">
                         <div class="bi-text">
-                            <span class="b-tag">Travel Trip</span>
-                            <h4><a href="./blog-details.html">Bryce Canyon A Stunning</a></h4>
-                            <div class="b-time"><i class="icon_clock_alt"></i> 29th April, 2019</div>
+                            <span class="b-tag">Pogled</span>
+                            <h4><a href="./blog-details.html">Kanjon Todorova</a></h4>
+                            <div class="b-time"><i class="icon_clock_alt"></i> 31. Mart, 2022</div>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6">
                     <div class="blog-item set-bg" data-setbg="img/blog/blog-8.jpg">
                         <div class="bi-text">
-                            <span class="b-tag">Event & Travel</span>
-                            <h4><a href="./blog-details.html">Motorhome Or Trailer</a></h4>
-                            <div class="b-time"><i class="icon_clock_alt"></i> 30th April, 2019</div>
+                            <span class="b-tag">Duša</span>
+                            <h4><a href="./blog-details.html">Java ili san</a></h4>
+                            <div class="b-time"><i class="icon_clock_alt"></i> 30. April, 2020</div>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6">
                     <div class="blog-item set-bg" data-setbg="img/blog/blog-9.jpg">
                         <div class="bi-text">
-                            <span class="b-tag">Camping</span>
-                            <h4><a href="./blog-details.html">Lost In Lagos Portugal</a></h4>
-                            <div class="b-time"><i class="icon_clock_alt"></i> 30th April, 2019</div>
+                            <span class="b-tag">Civilizacija</span>
+                            <h4><a href="./blog-details.html">Izgubljeni u miru</a></h4>
+                            <div class="b-time"><i class="icon_clock_alt"></i> 30. August, 2021</div>
                         </div>
                     </div>
                 </div>
