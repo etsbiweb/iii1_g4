@@ -242,7 +242,7 @@ try {
             <div class="row">
                 <div class="col-lg-8">
                      <div class="room-details-item">
-                        <img src="img/room/room-b3.jpg" style="width: 100%; aspect-ratio: 1 / 1; object-fit: cover;" alt="">
+                        <img src="img/room/room-4.jpg" style="width: 100%; aspect-ratio: 1 / 1; object-fit: cover;" alt="">
 
                         <div class="rd-text">
                             <div class="rd-title">
@@ -281,7 +281,7 @@ try {
                             </table>
                             </table>
                             <p class="f-para">Ako tražiš nešto posebno, nešto što ostavlja utisak i pruža maksimalnu udobnost – 
-                                ovaj apartman od 30 m² je vrhunac luksuza i komfora. Sa cijenom od 199 KM po noći, dobijaš mnogo
+                                ovaj apartman od 30 m² je vrhunac luksuza i komfora. Sa cijenom od 159 KM po noći, dobijaš mnogo
                                  više od običnog smještaja – dobijaš pravo iskustvo odmora kakvo zaslužuješ. Idealan je
                                    jer pruža prostor za maksimalno 1 osoba.</p> <p>Opremljen sa Kraljevskim krevetom, 
                                     ovaj apartman ti garantuje udobnost na svakom koraku. A kada je riječ o sadržaju – tu stvari postaju ozbiljne:
@@ -377,7 +377,7 @@ try {
     <div class="select-option">
         <label for="guest">Guests:</label>
         <select id="guest" name="broj_gostiju" required>
-            <option value="3">3 Adults</option>
+            <option value="1">1 Adult</option>
         </select>
     </div>
     <div class="select-option">
