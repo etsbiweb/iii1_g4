@@ -267,7 +267,7 @@ try {
                                     </tr>
                                 </tbody>
                             </table>
-                            <a href="./room-details.html" class="primary-btn">Više detalja</a>
+                            <a href="./room-details.php" class="primary-btn">Više detalja</a>
                         </div>
                     </div>
                 </div>
@@ -297,7 +297,7 @@ try {
                                     </tr>
                                 </tbody>
                             </table>
-                            <a href="./veliki-apartman.html" class="primary-btn">Više detalja</a>
+                            <a href="./veliki-apartman.php" class="primary-btn">Više detalja</a>
                         </div>
                     </div>
                 </div>
@@ -327,7 +327,7 @@ try {
                                     </tr>
                                 </tbody>
                             </table>
-                            <a href="./deluxe-apartman.html" class="primary-btn">Više detalja</a>
+                            <a href="./deluxe-apartman.php" class="primary-btn">Više detalja</a>
                         </div>
                     </div>
                 </div>
