@@ -121,6 +121,52 @@ ul, ol {
 .text-white h1, .text-white h2, .text-white h3, .text-white h4, .text-white h5, .text-white h6, .text-white p, .text-white span, .text-white li, .text-white a {
 	color: #fff;
 }
+/* avatar */
+.menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.dropdown1-container {
+    position: relative;
+    display: inline-block;
+}
+
+.avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.dropdown1 {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: white;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    z-index: 100;
+}
+
+.dropdown1 li a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: black;
+}
+
+.dropdown1 li a:hover {
+    background-color: #f0f0f0;
+}
+
+.dropdown1.show {
+    display: block;
+}
 /* buttons */
 .login-button{
 	padding: 7px 20px;
