@@ -273,7 +273,7 @@ try {
                     <div class="breadcrumb-text">
                         <h2>Mali apartman</h2>
                         <div class="bt-option">
-                            <a href="./home.html">Početna</a>
+                            <a href="./index.php">Početna</a>
                             <span>Rooms</span>
                         </div>
                     </div>

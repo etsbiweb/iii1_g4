@@ -224,10 +224,10 @@ try {
             <div class="row">
                 <div class="col-lg-12">
                     <div class="breadcrumb-text">
-                        <h2>Blog</h2>
+                        <h2>Naši Apartmani</h2>
                         <div class="bt-option">
-                            <a href="./home.html">Home</a>
-                            <span>Blog Grid</span>
+                            <a href="./index.php">Početna</a>
+                            <span>Apartmani</span>
                         </div>
                     </div>
                 </div>

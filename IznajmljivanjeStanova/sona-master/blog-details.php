@@ -224,11 +224,11 @@ try {
             <div class="row">
                 <div class="col-lg-10 offset-lg-1">
                     <div class="bd-hero-text">
-                        <span>Travel Trip & Camping</span>
-                        <h2>Cdc Issues Health Alert Notice For Travelers To Usa From Hon</h2>
+                        <span>Putovanje & kampovanje svijetom </span>
+                        <h2>SDA izdaje zdravstveno upozorenje za putnike u BiH iz Hrvatske</h2>
                         <ul>
-                            <li class="b-time"><i class="icon_clock_alt"></i> 15th April, 2019</li>
-                            <li><i class="icon_profile"></i> Kerry Jones</li>
+                            <li class="b-time"><i class="icon_clock_alt"></i> 15. April, 2025</li>
+                            <li><i class="icon_profile"></i> Ćazo Jusić</li>
                         </ul>
                     </div>
                 </div>
@@ -294,14 +294,14 @@ try {
                             </div>
                         </div>
                         <div class="comment-option">
-                            <h4>2 Comments</h4>
+                            <h4>2 komentara</h4>
                             <div class="single-comment-item first-comment">
                                 <div class="sc-author">
                                     <img src="img/blog/blog-details/avatar/avatar-1.jpg" alt="">
                                 </div>
                                 <div class="sc-text">
-                                    <span>27 Aug 2019</span>
-                                    <h5>Brandon Kelley</h5>
+                                    <span>27 Aug 2025</span>
+                                    <h5>Mediha Skalić</h5>
                                     <p>Neque porro qui squam est, qui dolorem ipsum quia dolor sit amet, consectetur,
                                         adipisci velit, sed quia non numquam eius modi tempora. incidunt ut labore et
                                         dolore magnam.</p>
@@ -314,8 +314,8 @@ try {
                                     <img src="img/blog/blog-details/avatar/avatar-2.jpg" alt="">
                                 </div>
                                 <div class="sc-text">
-                                    <span>27 Aug 2019</span>
-                                    <h5>Brandon Kelley</h5>
+                                    <span>28 Aug 2025</span>
+                                    <h5>Orhana Ćoralić</h5>
                                     <p>Neque porro qui squam est, qui dolorem ipsum quia dolor sit amet, consectetur,
                                         adipisci velit, sed quia non numquam eius modi tempora. incidunt ut labore et
                                         dolore magnam.</p>
@@ -328,8 +328,8 @@ try {
                                     <img src="img/blog/blog-details/avatar/avatar-3.jpg" alt="">
                                 </div>
                                 <div class="sc-text">
-                                    <span>27 Aug 2019</span>
-                                    <h5>Brandon Kelley</h5>
+                                    <span>30 Aug 2025</span>
+                                    <h5>Edin Burzić</h5>
                                     <p>Neque porro qui squam est, qui dolorem ipsum quia dolor sit amet, consectetur,
                                         adipisci velit, sed quia non numquam eius modi tempora. incidunt ut labore et
                                         dolore magnam.</p>
@@ -369,7 +369,7 @@ try {
             <div class="row">
                 <div class="col-lg-12">
                     <div class="section-title">
-                        <h2>Recommended</h2>
+                        <h2>Preporučujemo</h2>
                     </div>
                 </div>
             </div>
@@ -377,27 +377,27 @@ try {
                 <div class="col-md-4">
                     <div class="blog-item set-bg" data-setbg="img/blog/blog-1.jpg">
                         <div class="bi-text">
-                            <span class="b-tag">Travel Trip</span>
-                            <h4><a href="#">Tremblant In Canada</a></h4>
-                            <div class="b-time"><i class="icon_clock_alt"></i> 15th April, 2019</div>
+                             <span class="b-tag">Nezaboravna avantura</span>
+                            <h4><a href="#">Surfovanje u Bužimu</a></h4>
+                            <div class="b-time"><i class="icon_clock_alt"></i> 22. April, 2025</div>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="blog-item set-bg" data-setbg="img/blog/blog-2.jpg">
                         <div class="bi-text">
-                            <span class="b-tag">Camping</span>
-                            <h4><a href="#">Choosing A Static Caravan</a></h4>
-                            <div class="b-time"><i class="icon_clock_alt"></i> 15th April, 2019</div>
+                            <span class="b-tag">Kampovanje</span>
+                            <h4><a href="#">Izaberite pravu destinaciju</a></h4>
+                            <div class="b-time"><i class="icon_clock_alt"></i> 1. Januar, 2022</div>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="blog-item set-bg" data-setbg="img/blog/blog-3.jpg">
                         <div class="bi-text">
-                            <span class="b-tag">Event</span>
-                            <h4><a href="#">Copper Canyon</a></h4>
-                            <div class="b-time"><i class="icon_clock_alt"></i> 21th April, 2019</div>
+                            <span class="b-tag">Istraživanje</span>
+                            <h4><a href="#">Kanjon Pazarića</a></h4>
+                            <div class="b-time"><i class="icon_clock_alt"></i> 5. Novembar, 2025</div>
                         </div>
                     </div>
                 </div>

@@ -585,7 +585,7 @@ Najviše smo uživali u zajedničkom druženju s drugim gostima – bilo je orga
                         <div class="bi-text">
                             <span class="b-tag">Kampovanje</span>
                             <h4><a href="#">Izaberite pravu destinaciju</a></h4>
-                            <div class="b-time"><i class="icon_clock_alt"></i> 1. Januar, 2011</div>
+                            <div class="b-time"><i class="icon_clock_alt"></i> 1. Januar, 2022</div>
                         </div>
                     </div>
                 </div>

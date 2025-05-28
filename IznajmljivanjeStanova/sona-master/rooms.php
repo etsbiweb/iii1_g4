@@ -227,7 +227,7 @@ try {
                     <div class="breadcrumb-text">
                         <h2>Naši Apartmani</h2>
                         <div class="bt-option">
-                            <a href="./home.html">Početna</a>
+                            <a href="./index.php">Početna</a>
                             <span>Apartmani</span>
                         </div>
                     </div>
@@ -424,8 +424,6 @@ try {
                 <div class="col-lg-12">
                     <div class="room-pagination">
                         <a href="#">1</a>
-                        <a href="#">2</a>
-                        <a href="#">Sljedeća <i class="fa fa-long-arrow-right"></i></a>
                     </div>
                 </div>
             </div>
