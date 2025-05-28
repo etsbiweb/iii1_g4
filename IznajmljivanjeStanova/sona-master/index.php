@@ -157,8 +157,8 @@ try {
                                 <span>EN <i class="fa fa-angle-down"></i></span>
                                 <div class="flag-dropdown">
                                     <ul>
-                                        <li><a href="#">Zi</a></li>
-                                        <li><a href="#">Fr</a></li>
+                                        <li><a href="#">BOS</a></li>
+                                        <li><a href="#">ENG</a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -222,15 +222,10 @@ try {
                 <div class="hero-text">
                     <h1>Sona Luksuzni Apartmani</h1>
                     <p>Najbolji i najpovoljniji apartmani za najbolje kupce. Smjestite se kod nas i osjećajte se kao kod kuće!</p>
-                    <a href="../sona-master/rooms.html" class="primary-btn">Otkrij sada</a>
+                    <a href="rooms.php" class="primary-btn">Otkrij sada</a>
                 </div>
             </div>
-            <div class="col-xl-4 col-lg-5 offset-xl-2 offset-lg-1">
-                <div class="booking-form">
-                    <h3>Iznajmi svoj apartman</h3>
-                
-                </div>
-            </div>
+            
         </div>
     </div>
     <div class="hero-slider owl-carousel">
@@ -372,7 +367,7 @@ try {
                                         </tr>
                                     </tbody>
                                 </table>
-                                <a href="./room-details.html" class="primary-btn">Vise Detalja</a>
+                                <a href="room-details.php" class="primary-btn">Vise Detalja</a>
                             </div>
                         </div>
                     </div>
@@ -401,7 +396,7 @@ try {
                                         </tr>
                                     </tbody>
                                 </table>
-                                <a href="./veliki-apartman.html" class="primary-btn">Više detalja</a>
+                                <a href="veliki-apartman.php" class="primary-btn">Više detalja</a>
                             </div>
                         </div>
                     </div>
@@ -430,7 +425,7 @@ try {
                                         </tr>
                                     </tbody>
                                 </table>
-                                <a href="./deluxe-apartman.html" class="primary-btn">Vise detalja</a>
+                                <a href="deluxe-apartman.php" class="primary-btn">Vise detalja</a>
                             </div>
                         </div>
                     </div>
@@ -459,7 +454,7 @@ try {
                                         </tr>
                                     </tbody>
                                 </table>
-                                <a href="./porodicni-apartman.html" class="primary-btn">Vise detalja</a>
+                                <a href="porodicni-apartman.php" class="primary-btn">Vise detalja</a>
                             </div>
                         </div>
                     </div>
