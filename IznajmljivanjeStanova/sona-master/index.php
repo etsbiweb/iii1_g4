@@ -602,7 +602,7 @@ Najviše smo uživali u zajedničkom druženju s drugim gostima – bilo je orga
                     <div class="blog-item small-size set-bg" data-setbg="img/blog/blog-wide.jpg">
                         <div class="bi-text">
                             <span class="b-tag">Event</span>
-                            <h4><a href="#">Putovanje u hladnije predjele</a></h4>
+                            <h4><a href="#">Putovanje u san</a></h4>
                             <div class="b-time"><i class="icon_clock_alt"></i> 12. Maj, 2023</div>
                         </div>
                     </div>
