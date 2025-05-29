@@ -111,5 +111,6 @@ function closePopup() {
 } else {
     echo "Forma nije ispravno poslana.";
 }
-
+header("Location: ../sona-master/index1.php");
+exit();
 ?>
