@@ -179,7 +179,7 @@ try {
                                 <a href="#"><i class="fa fa-tripadvisor"></i></a>
                                 <a href="#"><i class="fa fa-instagram"></i></a>
                             </div>
-                            <a href="#" class="bk-btn">Rezerviši sada</a>
+                            <a href="./rezervisi.php" class="bk-btn">Rezerviši sada</a>
                             <div class="language-option">
                                 <img src="img/flag.jpg" alt="">
                                 <span>EN <i class="fa fa-angle-down"></i></span>
@@ -209,30 +209,48 @@ try {
                         <div class="nav-menu">
                             <nav class="mainmenu">
                                 <ul>
-                                    <li><a href="./index.php">Početna</a></li>
-                                    <li><a href="./rooms.php">Apartmani</a></li>
-                                    <li><a href="./about-us.php">O nama</a></li>
+                                    <li><a href="./index1.php">Početna</a></li>
+                                    <li><a href="./rooms1.php">Apartmani</a></li>
+                                    <li><a href="./about-us1.php">O nama</a></li>
                                     <li class="active"><a href="#">Detalji</a>
                                     <ul class="dropdown">
-                                    <li><a href="./room-details.php">Mali apartman</a></li>
-                                    <li><a href="./veliki-apartman.php">Veliki apartman</a></li>
-                                    <li><a href="./deluxe-apartman.php">Deluxe apartman</a></li>
-                                    <li><a href="./porodicni-apartman.php">Porodični apartman</a></li>
-                                    <li><a href="./blog-details.php">Detalji Bloga</a></li>
+                                    <li><a href="./room-details1.php">Mali apartman</a></li>
+                                    <li><a href="./veliki-apartman1.php">Veliki apartman</a></li>
+                                    <li><a href="./deluxe-apartman1.php">Deluxe apartman</a></li>
+                                    <li><a href="./porodicni-apartman1.php">Porodicni apartman</a></li>
+                                    <li><a href="./blog-details1.php">Detalji Bloga</a></li>
                                     
                                 </ul>
                              </li>
-                                    <li><a href="./blog.php">Novosti</a></li>
-                                    <li><a href="./contact.php">Kontakt</a></li>
+                                    <li><a href="./blog1.php">Novosti</a></li>
+                                    <li><a href="./contact1.php">Kontakt</a></li>
                                 </ul>
                             </nav>
                             <div class="nav-right search-switch">
                                 <i class="icon_search"></i>
                             </div>
-                            <div class="nav-right">
-                                <button onclick="window.location.href='login.html';" class="login-button">Login</button>
-                           
-                                <button onclick="window.location.href='singup.html';" class="signup-btn">SignUp</button>
+                            <div class="nav-right dropdown1-container">
+                                 <a href="#" class="avatar-toggle">
+                                 <img src="./img/avatar/avatar.avif" alt="Avatar" class="avatar">
+                                 </a>
+                                 <ul class="dropdown1">
+                                      <li><a href="./profile.php">Profil</a></li>
+                                      <li><a href="../includes/logout.php">Odjava</a></li>
+                                 </ul>
+                              </div>
+                              <script>
+                               document.querySelector('.avatar-toggle').addEventListener('click', function (e) {
+                               e.preventDefault();
+                               document.querySelector('.dropdown1').classList.toggle('show');
+                             });
+
+                              // Zatvori dropdown kad klikneš vani
+                                window.addEventListener('click', function (e) {
+                                if (!e.target.closest('.dropdown1-container')) {
+                             document.querySelector('.dropdown1').classList.remove('show');
+                                }
+                               });
+                             </script>
                             </div>
                         </div>
                     </div>

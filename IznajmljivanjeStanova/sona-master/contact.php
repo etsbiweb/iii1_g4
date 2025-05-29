@@ -206,9 +206,9 @@ try {
                                 <i class="icon_search"></i>
                             </div>
                             <div class="nav-right">
-                                <button onclick="window.location.href='login.html';" class="login-button">Login</button>
+                                <button onclick="window.location.href='../includes/login.php';" class="login-button">Login</button>
                            
-                                <button onclick="window.location.href='singup.html';" class="signup-btn">SignUp</button>
+                                <button onclick="window.location.href='../includes/singup.php';" class="signup-btn">SignUp</button>
                             </div>
                         </div>
                     </div>

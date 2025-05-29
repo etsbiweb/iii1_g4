@@ -1,6 +1,11 @@
 <?php
 session_start();
+if (!isset($_SESSION['user_id'])) {
+    header("Location: index.php");
+    exit();
+}
 include '../includes/dbh.inc.php';
+
 
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\SMTP;
@@ -105,7 +110,7 @@ try {
             <ul>
                 <li class="active"><a href="./index.php">Početna</a></li>
                 <li><a href="./rooms.php">Apartmani</a></li>
-                <li><a href="./about-us.php">O nama</a></li>
+                <li><a href="./about-us1.php">O nama</a></li>
                 <li><a href="#">Detalji</a>
                     <ul class="dropdown">
                         <li><a href="./room-details.php">Mali apartman</a></li>
@@ -151,7 +156,7 @@ try {
                                 <a target="_blank" href="https://www.tripadvisor.com/Tourism-g295389-Bihac_Una_Sana_Canton_Federation_of_Bosnia_and_Herzegovina-Vacations.php"><i class="fa fa-tripadvisor"></i></a>
                                 <a target="_blank" href="https://www.instagram.com/svarogwinterhouseclub/"><i class="fa fa-instagram"></i></a>
                             </div>
-                            <a href="#" class="bk-btn">Rezerviraši sada</a>
+                            <a href="./rezervisi.php" class="bk-btn">Rezerviraši sada</a>
                             <div class="language-option">
                                 <img src="img/flag.jpg" alt="">
                                 <span>EN <i class="fa fa-angle-down"></i></span>
@@ -178,48 +183,58 @@ try {
                         </div>
                     </div>
                     <div class="col-lg-10">
-                        <div class="nav-menu  ml-auto">
-                            <nav class="mainmenu  ml-5">
-                                <ul class=" ml-auto">
-                                    <li class="active"><a href="./index.php">Početna</a></li>
-                                    <li><a href="./rooms.php">Apartmani</a></li>
-                                    <li><a href="./about-us.php">O nama</a></li>
+                        <div class="nav-menu">
+                            <nav class="mainmenu1">
+                                <ul>
+                                    <li class="active"><a href="./index1.php">Početna</a></li>
+                                    <li><a href="./rooms1.php">Apartmani</a></li>
+                                    <li><a href="./about-us1.php">O nama</a></li>
                                     <li><a href="#">Detalji</a>
                                     <ul class="dropdown">
-                                    <li><a href="./room-details.php">Mali apartman</a></li>
-                                    <li><a href="./veliki-apartman.php">Veliki apartman</a></li>
-                                    <li><a href="./deluxe-apartman.php">Deluxe apartman</a></li>
-                                    <li><a href="./porodicni-apartman.php">Porodicni apartman</a></li>
-                                    <li><a href="./blog-details.php">Detalji Bloga</a></li>
+                                    <li><a href="./room-details1.php">Mali apartman</a></li>
+                                    <li><a href="./veliki-apartman1.php">Veliki apartman</a></li>
+                                    <li><a href="./deluxe-apartman1.php">Deluxe apartman</a></li>
+                                    <li><a href="./porodicni-apartman1.php">Porodicni apartman</a></li>
+                                    <li><a href="./blog-details1.php">Detalji Bloga</a></li>
                                     
                                 </ul>
                              </li>
-                                    <li><a href="./blog.php">Novosti</a></li>
-                                    <li><a href="./contact.php">Kontakt</a></li>
+                                    <li><a href="./blog1.php">Novosti</a></li>
+                                    <li><a href="./contact1.php">Kontakt</a></li>
                                 </ul>
                             </nav>
                             <div class="nav-right search-switch">
                                 <i class="icon_search"></i>
                             </div>
-                            <div class="nav-right">
-                            <li class="dropdown1-container">
-                              <a href="#" class="avatar-toggle">
-                                <img src="./img/avatar/avatar.avif" alt="Avatar" class="avatar">
-                             </a>
-                                <ul class="dropdown1">
-                                  <li><a href="#">1</a></li>
-                                  <li><a href="#">2</a></li>
-                                  <li><a href="#">3</a></li>
-                                  <li><a href="#">4</a></li>
-                                </ul>
-                             </li>
-                            </div>
+                            <div class="nav-right dropdown1-container">
+                                 <a href="#" class="avatar-toggle">
+                                 <img src="./img/avatar/avatar.avif" alt="Avatar" class="avatar">
+                                 </a>
+                                 <ul class="dropdown1">
+                                      <li><a href="./profile.php">Profil</a></li>
+                                      <li><a href="../includes/logout.php">Odjava</a></li>
+                                 </ul>
+                              </div>
+                              <script>
+                               document.querySelector('.avatar-toggle').addEventListener('click', function (e) {
+                               e.preventDefault();
+                               document.querySelector('.dropdown1').classList.toggle('show');
+                             });
+
+                              // Zatvori dropdown kad klikneš vani
+                                window.addEventListener('click', function (e) {
+                                if (!e.target.closest('.dropdown1-container')) {
+                             document.querySelector('.dropdown1').classList.remove('show');
+                                }
+                               });
+                             </script>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </header>
+
     <!-- Header End -->
 
     <!-- Hero Section Begin -->
@@ -233,12 +248,7 @@ try {
                     <a href="../sona-master/rooms.html" class="primary-btn">Otkrij sada</a>
                 </div>
             </div>
-            <div class="col-xl-4 col-lg-5 offset-xl-2 offset-lg-1">
-                <div class="booking-form">
-                    <h3>Iznajmi svoj apartman</h3>
-                
-                </div>
-            </div>
+            
         </div>
     </div>
     <div class="hero-slider owl-carousel">
@@ -271,7 +281,7 @@ try {
                         </div>
                         <p class="f-para">Sona.com je vaš pouzdan partner za rezervaciju apartmana širom svijeta. Pružamo inspiraciju i jednostavan pristup smještaju putem 90 lokalizovanih stranica na 41 jeziku – svaki dan, za hiljade korisnika.</p>
                         <p class="s-para">Bilo da tražite studio apartman, luksuzni apartman, apartman s pogledom na more ili porodični apartman – na Sona.com ste u sigurnim rukama.</p>
-                        <a href="./about-us.html" class="primary-btn about-btn">Saznaj više</a>
+                        <a href="./about-us1.html" class="primary-btn about-btn">Saznaj više</a>
                     </div>
                 </div>
                 <div class="col-lg-6">
